@@ -1,0 +1,36 @@
+$border-color: oColorsGetPaletteColor('pink-tint3');
+$bg-color: oColorsGetPaletteColor('pink');
+$timestamp-color: oColorsGetPaletteColor('warm-6');
+$font-color: oColorsGetPaletteColor('cold-2');
+
+.alphaville-most-recent-post {
+	position: relative;
+	border: 1px solid $border-color;
+	margin: 10px 0;
+	padding: 15px 25px 15px 20px;
+
+	.o-date {
+		display: block;
+		text-transform: uppercase;
+		color: $timestamp-color;
+	}
+}
+.alphaville-most-recent-post__title {
+	@include oTypographySerifDisplay(m);
+
+	left: 10px;
+	top: -10px;
+	background-color: $bg-color;
+	position: absolute;
+	font-family: FinancierDisplayWeb,serif;
+	margin: 0;
+	padding: 0 10px;
+}
+.alphaville-most-recent-post__link {
+	@include oTypographySerifDisplay(l);
+
+	text-decoration: none;
+	border: 0;
+	font-family: FinancierDisplayWeb,serif;
+	color: $font-color;
+}

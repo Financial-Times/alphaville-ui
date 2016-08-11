@@ -1,0 +1,53 @@
+html {
+	// The iconic pink background
+	@include oColorsFor(page, background);
+
+	// Set a font family on the whole document
+	font-family: $o-typography-sans;
+	font-size: initial;
+
+	// Prevent navigation menus from creating
+	// extra space on sides of the page
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0;
+	color: oColorsGetPaletteColor('grey-tint5');
+	-webkit-text-size-adjust: 100%;
+}
+
+.core .o--if-js,
+.enhanced .o--if-no-js { display: none !important; }
+
+.alphaville-visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	border: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+}
+
+.alphaville-content {
+	margin-top: 12px;
+}
+
+.alphaville-logged-in .alphaville-logged-in-hidden {
+	display: none;
+}
+
+.alphaville-logged-out .alphaville-logged-out-hidden {
+	display: none;
+}
+
+.clearfix:after {
+	content: " ";
+	/* Older browser do not support empty content */
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}

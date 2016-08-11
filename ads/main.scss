@@ -1,0 +1,56 @@
+.alphaville-ad-top {
+	display: none;
+
+	@include oGridRespondTo(L) {
+		display: block;
+		padding: 10px 0;
+		line-height: 0;
+		background-color: #333333;
+	}
+}
+
+.alphaville-ad-mpu-mobile {
+	display: block;
+
+	@include oGridRespondTo(L) {
+		display: none;
+	}
+}
+
+.alphaville-ad-dmpu-desktop {
+	display: none;
+
+	@include oGridRespondTo(L) {
+		display: block;
+	}
+}
+
+.alphaville-ad-homepage-small {
+	@include oGridColspan(
+		(default: 12, M: hide)
+	);
+
+	display: block;
+}
+.alphaville-ad-homepage-large {
+	@include oGridColspan(
+		(default: hide, M: 12)
+	);
+
+	display: none;
+}
+
+.alphaville-ad-homepage {
+	@include oGridColspan(
+		(default: 12)
+	);
+}
+
+
+
+.o-ads--empty,
+.o-ads[data-o-ads-loaded=false] {
+	height: 0;
+	min-height: 0;
+	padding: 0;
+}
