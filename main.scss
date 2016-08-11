@@ -24,7 +24,9 @@ $o-icons-is-silent: false;
 
 @import 'o-colors/main';
 
-@import './session-notification/main';
+@import './generic/main';
+
+@import './marketslive-session-notification/main';
 @import './ads/main';
 @import './barrier/main';
 @import './header/main';

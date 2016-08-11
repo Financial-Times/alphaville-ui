@@ -1,4 +1,4 @@
-const sessionListener = require('./alphaville-marketslive-session-listener/main');
+const sessionListener = require('../marketslive-session-listener/main');
 
 const sessionNotificationTemplate = `
 	<div class="marketslive-notification">
