@@ -8,6 +8,7 @@ exports['o-tracking'] = require('o-tracking');
 exports['header'] = require('./header/main');
 exports['marketslive-session-listener'] = require('./marketslive-session-listener/main');
 exports['marketslive-session-notification'] = require('./marketslive-session-notification/main');
+exports['tracking'] = require('./tracking/main');
 
 if (document.cookie.indexOf('FTSession') !== -1) {
 	document.documentElement.className += ' alphaville-logged-in';
