@@ -1,0 +1,44 @@
+{{#isTest}}
+	{{#oComments}}
+		<script data-o-comments-config type="application/json">
+			{
+				"livefyre": {
+					"network": "ft-1.fyre.co",
+					"domain": "ft-1.auth.fyre.co"
+				},
+				"showEnvironment": true
+			}
+		</script>
+	{{/oComments}}
+
+	<script data-o-comment-api-config type="application/json">
+		{
+			"suds": {
+				"baseUrl": "//session-user-data-test-webservices.ft.com"
+			},
+			"ccs": {
+				"baseUrl": "//comment-creation-test-webservices.ft.com"
+			},
+			"cacheConfig": {
+				"authBaseName": "comments-test-auth-",
+				"initBaseName": "comments-test-init-"
+			},
+			"livefyre": {
+				"networkName": "ft-1"
+			}
+		}
+	</script>
+{{/isTest}}
+
+{{#isProd}}
+	<script data-o-comment-api-config type="application/json">
+		{
+			"suds": {
+				"baseUrl": "//alphaville-h2.ft.com/comments/session"
+			},
+			"ccs": {
+				"baseUrl": "//alphaville-h2.ft.com/comments/comment"
+			}
+		}
+	</script>
+{{/isProd}}
