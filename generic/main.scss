@@ -18,7 +18,19 @@ body {
 }
 
 .core .o--if-js,
-.enhanced .o--if-no-js { display: none !important; }
+.enhanced .o--if-no-js {
+	display: none !important;
+}
+
+a {
+	color: oColorsGetPaletteColor('blue');
+	-webkit-font-smoothing: antialiased;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
 
 .alphaville-visually-hidden {
 	position: absolute;
