@@ -49,8 +49,7 @@
 
 
 .o-ads--empty,
-.o-ads[data-o-ads-loaded=false],
-.o-ads[aria-hidden=true] {
+.o-ads[data-o-ads-loaded=false] {
 	height: 0;
 	min-height: 0;
 	padding: 0;
