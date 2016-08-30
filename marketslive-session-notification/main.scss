@@ -1,12 +1,13 @@
-$ml-notification-red-color: #cf191d;
+$ml-notification-default-color: #cf191d;
+$ml-notification-background-color: transparent;
 
-@mixin marketslive-lozenge-icon ($size: 16, $color: $ml-notification-red-color) {
-	$borderWidth: $size / 8;
+@mixin marketslive-lozenge-icon ($size: 16, $color: $ml-notification-default-color, $bgColor: $ml-notification-background-color) {
+	$borderWidth: round($size / 8);
 
 	display: inline-block;
-	padding: #{($size / 2 - $borderWidth)}px;
+	padding: #{round($size / 2 - $borderWidth)}px;
 	color: oColorsGetPaletteColor("white");
-	background-color: transparent;
+	background-color: $bgColor;
 	border-radius: #{(2 * $size)}px;
 	margin-left: 5px;
 	position: relative;
@@ -17,7 +18,7 @@ $ml-notification-red-color: #cf191d;
 		position: absolute;
 		top: 0;
 		right: 0;
-		padding: #{($size / 2 - 2 * $borderWidth)}px;
+		padding: #{round($size / 2 - 2 * $borderWidth)}px;
 		background-color: $color;
 		border-radius: #{($size + 10)}px;
 		margin-top: #{$borderWidth}px;
@@ -25,7 +26,7 @@ $ml-notification-red-color: #cf191d;
 	}
 }
 
-@mixin marketslive-live-title ($color: $ml-notification-red-color) {
+@mixin marketslive-live-title ($color: $ml-notification-default-color) {
 	color: $color !important;
 }
 
@@ -82,7 +83,7 @@ $ml-notification-red-color: #cf191d;
 		text-transform: uppercase;
 		font-size: 16px;
 		line-height: 18px;
-		color: $ml-notification-red-color;
+		color: $ml-notification-default-color;
 		margin-left: 10px;
 
 		@include oGridRespondTo(M) {
@@ -102,7 +103,7 @@ $ml-notification-red-color: #cf191d;
 		@include oGridRespondTo(M) {
 			display: block;
 			margin-bottom: 10px;
-			color: $ml-notification-red-color;
+			color: $ml-notification-default-color;
 			font-size: 13px;
 		}
 	}
