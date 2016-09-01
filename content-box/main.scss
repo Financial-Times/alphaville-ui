@@ -1,0 +1,20 @@
+$border-color: oColorsGetPaletteColor('pink-tint3');
+$bg-color: oColorsGetPaletteColor('pink');
+
+.alphaville-content-box {
+	position: relative;
+	border: 1px solid $border-color;
+	margin: 10px 0;
+	padding: 15px 25px 15px 20px;
+}
+
+.alphaville-content-box__title {
+	@include oTypographySerifDisplay(m);
+
+	left: 10px;
+	top: -10px;
+	background-color: $bg-color;
+	position: absolute;
+	margin: 0;
+	padding: 0 10px;
+}

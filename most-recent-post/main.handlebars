@@ -1,5 +1,4 @@
-<div class="alphaville-most-recent-post">
-    <h4 class="alphaville-most-recent-post__title">Read latest:</h4>
-    <a class="alphaville-most-recent-post__link" href="/content/{{id}}">{{title}}</a>
-    <time data-o-component="o-date" class="o-date" datetime="{{publishedDate}}">{{publishedDate}}</time>
-</div>
+{{#> alphaville-ui/content-box/main title='Read latest:'}}
+	<a class="alphaville-most-recent-post__link" href="/content/{{id}}">{{../title}}</a>
+	<time data-o-component="o-date" class="o-date alphaville-most-recent-post__timestamp" datetime="{{publishedDate}}">{{publishedDate}}</time>
+{{/ alphaville-ui/content-box/main}}
