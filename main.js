@@ -11,6 +11,11 @@ exports['marketslive-session-notification'] = require('./marketslive-session-not
 exports['tracking'] = require('./tracking/main');
 exports['InfiniteScroll'] = require('./infinite-scroll/main');
 
+exports.utils = {
+	dom: require('./utils/dom'),
+	httpRequest: require('./utils/httpRequest')
+};
+
 if (document.cookie.indexOf('FTSession') !== -1) {
 	document.documentElement.className += ' alphaville-logged-in';
 } else {
