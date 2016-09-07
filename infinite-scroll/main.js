@@ -52,9 +52,18 @@ function InfiniteScroll (config) {
 	let loadInProgress = false;
 	let morePages = true;
 
+	config.container.appendChild(domUtils.toDOM(`
+		<div class="alphaville-infinite-scroll--spinner-container">
+			<div class="alphaville-spinner"></div>
+		</div>
+	`));
+	const spinnerContainer = config.container.querySelector('.alphaville-infinite-scroll--spinner-container');
+
 	const loadNextPage = function () {
 		if (!loadInProgress && morePages) {
 			loadInProgress = true;
+
+			spinnerContainer.style.display = 'block';
 
 			query.ajax = true;
 			query[config.pageParamName] = nextPage;
@@ -70,11 +79,13 @@ function InfiniteScroll (config) {
 				}
 
 				nextPage++;
-				config.container.appendChild(domUtils.toDOM(itemsHtml));
+				config.container.insertBefore(domUtils.toDOM(itemsHtml), spinnerContainer);
 
 				if (typeof config.onNewPage === 'function') {
 					config.onNewPage();
 				}
+
+				spinnerContainer.style.display = 'none';
 
 				loadInProgress = false;
 			}).catch((err) => {
