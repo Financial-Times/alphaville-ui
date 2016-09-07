@@ -1,0 +1,39 @@
+@keyframes alphaville-spinner-rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@mixin alphaville-spinner ($color: oColorsGetPaletteColor('grey-tint2'), $bgColor: oColorsGetPaletteColor('pink'), $size: 40px, $speed: 0.7s) {
+	font-size: 10px;
+	text-indent: -9999em;
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+	background: $bgColor;
+	background: linear-gradient(to right, $color 10%, rgba(255, 255, 255, 0) 42%);
+	position: relative;
+	animation: alphaville-spinner-rotate $speed infinite linear;
+	transform: translateZ(0);
+
+	&:after {
+		background: $bgColor;
+		width: 75%;
+		height: 75%;
+		border-radius: 50%;
+		content: '';
+		margin: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+}
+
+.alphaville-spinner {
+	@include alphaville-spinner($size: 30px, $color: oColorsGetPaletteColor('pink-tint2'));
+}
