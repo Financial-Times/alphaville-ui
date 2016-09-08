@@ -81,14 +81,13 @@
 	display: inline-block;
 	width: 1px;
 	height: 23px;
-	margin: 0 5px -2px;
+	margin: 0 5px;
 	background: oColorsGetPaletteColor('pink-tint3');
 }
 
 .alphaville-header__toggle-article-view-item {
 	border: 0;
 	display: inline-block;
-	margin-top: 2px;
 	position: relative;
 
 	&:after {
@@ -105,7 +104,7 @@
 	@include oGridRespondTo(M) {
 		display: inline-block;
 		position: relative;
-		top: -5px;
+		top: -7px;
 		font-style: italic;
 	}
 }
@@ -114,31 +113,31 @@ $alphaville-header__toggle-article-view--color-normal: oColorsGetPaletteColor('p
 $alphaville-header__toggle-article-view--color-active: oColorsGetPaletteColor('teal-1');
 
 .alphaville-header__toggle-article-view--grid {
-	@include oIconsGetIcon(grid, $alphaville-header__toggle-article-view--color-normal, 20);
+	@include oIconsGetIcon('grid', $alphaville-header__toggle-article-view--color-normal, 25, $iconset-version: 1);
 
 	&:after {
-		@include oIconsGetIcon(grid, $alphaville-header__toggle-article-view--color-active, 20);
+		@include oIconsGetIcon('grid', $alphaville-header__toggle-article-view--color-active, 25, $iconset-version: 1);
 		visibility: hidden;
 		left: -9999px;
 	}
 
 	&:hover,
 	&[data-selected] {
-		@include oIconsGetIcon(grid, $alphaville-header__toggle-article-view--color-active, 20);
+		@include oIconsGetIcon('grid', $alphaville-header__toggle-article-view--color-active, 25, $iconset-version: 1);
 	}
 }
 .alphaville-header__toggle-article-view--list {
-	@include oIconsGetIcon(hamburger, $alphaville-header__toggle-article-view--color-normal, 20);
+	@include oIconsGetIcon('list', $alphaville-header__toggle-article-view--color-normal, 25, $iconset-version: 1);
 
 	&:after {
-		@include oIconsGetIcon(hamburger, $alphaville-header__toggle-article-view--color-active, 20);
+		@include oIconsGetIcon('list', $alphaville-header__toggle-article-view--color-active, 25, $iconset-version: 1);
 		visibility: hidden;
 		left: -9999px;
 	}
 
 	&:hover,
 	&[data-selected] {
-		@include oIconsGetIcon(hamburger, $alphaville-header__toggle-article-view--color-active, 20);
+		@include oIconsGetIcon('list', $alphaville-header__toggle-article-view--color-active, 25, $iconset-version: 1);
 	}
 }
 
