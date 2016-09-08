@@ -15,9 +15,3 @@ exports.utils = {
 	dom: require('./utils/dom'),
 	httpRequest: require('./utils/httpRequest')
 };
-
-if (document.cookie.indexOf('FTSession') !== -1) {
-	document.documentElement.className += ' alphaville-logged-in';
-} else {
-	document.documentElement.className += ' alphaville-logged-out';
-}
