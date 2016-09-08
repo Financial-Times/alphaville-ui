@@ -1,4 +1,4 @@
-<header class="o-header alphaville-header" data-o-component="o-header" data-o-header--no-js="">
+<header class="o-header o-header--simple alphaville-header" data-o-component="o-header" data-o-header--no-js="">
 	<div class="o-header__row o-header__top">
 		<div class="o-header__container">
 			<div class="o-header__top-wrapper">
@@ -11,7 +11,7 @@
 					</a>
 				</div>
 				<div class="o-header__top-column o-header__top-column--center">
-					<a class="o-header__top-logo" href="/" title="Go to FT Alphaville homepage">
+					<a class="o-header__top-logo" href="http://www.ft.com" title="Go to Financial Times homepage">
 						<span class="o-header__visually-hidden">FT Alphaville</span>
 					</a>
 				</div>
@@ -50,6 +50,14 @@
 		</div>
 	</div>
 
+	<div class="o-header__subbrand alphaville-header__subbrand" data-o-header-subbrand="">
+		<div class="alphaville-header__subbrand-content">
+			<a class="" href="/" title="Go to FT Alphaville homepage">
+				<span class="alphaville-header__subbrand-title">Alphaville</span>
+			</a>
+		</div>
+	</div>
+
 	<nav id="o-header-nav-mobile" class="o-header__row o-header__nav o-header__nav--mobile" role="navigation">
 		<div class="o-header__container">
 			{{#toggleArticleView}}
@@ -71,7 +79,7 @@
 				</div>
 			{{/toggleArticleView}}
 			
-			<ul class="o-header__nav-list">
+			<ul class="o-header__nav-list alphaville-header__nav-list">
 				{{#navItems}}
 				<li class="o-header__nav-item {{liClass}}">
 					<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-selected="true"{{/selected}} {{{attributes}}}>
@@ -105,7 +113,7 @@
 				</div>
 			{{/toggleArticleView}}
 
-			<ul class="o-header__nav-list">
+			<ul class="o-header__nav-list alphaville-header__nav-list">
 				{{#navItems}}
 				<li class="o-header__nav-item {{liClass}}">
 					<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-selected="true"{{/selected}} id="o-header-link-">
