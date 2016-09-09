@@ -77,6 +77,10 @@
 	}
 }
 
+.alphaville-header--sticky .alphaville-header__toggle-article-view {
+	padding-top: 15px;
+}
+
 .alphaville-header__toggle-article-view-item-separator {
 	display: inline-block;
 	width: 1px;
@@ -202,5 +206,11 @@ $alphaville-header__toggle-article-view--color-active: oColorsGetPaletteColor('t
 		font-size: 32px;
 		line-height: 34px;
 		margin-top: 14px;
+	}
+}
+
+.alphaville-header__nav-item--user {
+	@include oGridRespondTo($until: M) {
+		display: none;
 	}
 }
