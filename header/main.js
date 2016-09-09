@@ -55,11 +55,11 @@ document.addEventListener("o.DOMContentLoaded", function() {
 	const headerContainer = document.querySelectorAll('.o-header');
 	const headerDrawerContainer = document.querySelectorAll('.o-header__drawer');
 
-	headerContainer.forEach((container) => {
-		manageLoginLinks(container);
-	});
+	for (let i = 0; i < headerContainer.length; i++) {
+		manageLoginLinks(headerContainer[i]);
+	}
 
-	headerDrawerContainer.forEach((container) => {
-		manageLoginLinks(container);
-	});
+	for (let i = 0; i < headerDrawerContainer.length; i++) {
+		manageLoginLinks(headerDrawerContainer[i]);
+	}
 });
