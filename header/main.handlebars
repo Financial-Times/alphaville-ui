@@ -20,7 +20,7 @@
 						<ul class="o-header__nav-list o-header__nav-list--right">
 							{{#userNav}}
 								<li class="o-header__nav-item {{liClass}} alphaville-header__nav-item--user">
-									<a class="{{#button}}o-header__nav-button{{/button}}{{^button}}o-header__nav-link{{/button}}" href="{{{url}}}" {{{attributes}}}>{{name}}</a>
+									<a class="{{#if button}}o-header__nav-button{{else}}o-header__nav-link{{/if}}" href="{{{url}}}" {{{attributes}}}>{{name}}</a>
 								</li>
 							{{/userNav}}
 
@@ -203,7 +203,7 @@
 						<ul class="o-header__nav-list o-header__nav-list--right">
 							{{#userNav}}
 								<li class="o-header__nav-item {{liClass}} alphaville-header__nav-item--user">
-									<a class="o-header__nav-link o-header__nav-link--utility" href="{{{url}}}" {{{attributes}}}>{{name}}</a>
+									<a class="{{#if button}}o-header__nav-button{{else}}o-header__nav-link{{/if}}" href="{{{url}}}" {{{attributes}}}>{{name}}</a>
 								</li>
 							{{/userNav}}
 
