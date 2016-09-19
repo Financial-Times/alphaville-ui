@@ -8,7 +8,7 @@ exports.activeSession = function () {
 
 		return response.json();
 	}).then((json) => {
-		if (json && json.data && json.data.id) {
+		if (json && json.data && json.data.sessionId) {
 			return json.data;
 		} else {
 			return null;

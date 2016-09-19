@@ -85,26 +85,26 @@ document.addEventListener('o.DOMContentLoaded', () => {
 
 	latestSession().then((session) => {
 		if (session) {
-			showLiveSession(session.id);
+			showLiveSession(session.sessionId);
 		}
 	});
 
 	sessionListener.listen().then(function (socket) {
 		if (socket) {
 			socket.bind('session-start', function (session) {
-				showLiveSession(session.uuid);
+				showLiveSession(session.sessionId);
 			});
 
 			socket.bind('session-end', function () {
 				function verifyIfSessionInProgress (verifyNumber) {
 					latestSession().then((session) => {
 						if (session) {
-							if (session.id === lastSessionId) {
+							if (session.sessionId === lastSessionId) {
 								hideLiveSession();
 							}
 
 							if (verifyNumber > 4) {
-								showLiveSession(session.id);
+								showLiveSession(session.sessionId);
 							} else {
 								setTimeout(() => {
 									verifyIfSessionInProgress(verifyNumber + 1);
