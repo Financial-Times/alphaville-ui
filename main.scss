@@ -32,6 +32,7 @@ $o-overlay-is-silent: false;
 
 @import './content-box/main';
 
+@import './overlays/main';
 @import './ads/main';
 @import './barrier/main';
 @import './marketslive-session-notification/main';
