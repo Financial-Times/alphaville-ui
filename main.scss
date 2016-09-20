@@ -23,6 +23,9 @@ $o-footer-is-silent: false;
 $o-icons-is-silent: false;
 @import 'o-icons/main';
 
+$o-overlay-is-silent: false;
+@import 'o-overlay/main';
+
 @import 'o-colors/main';
 
 @import './generic/main';
