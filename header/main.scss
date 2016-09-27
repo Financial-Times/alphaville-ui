@@ -214,3 +214,8 @@ $alphaville-header__toggle-article-view--color-active: oColorsGetPaletteColor('t
 		display: none;
 	}
 }
+
+.o-header__top-column--left,
+.o-header__top-column--right {
+	width: 20%;
+}
