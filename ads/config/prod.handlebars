@@ -2,7 +2,14 @@
 	{
 		"gpt": {
 			"network": 5887,
-			"site": "test.5887.alphaville"
+			"site": "test.5887.alphaville",
+			"zone": "unclassified"
+		},
+		"targetingApi": {
+			"user": 'https://ads-api.ft.com/v1/user',
+			{{#articleId}}"page": 'https://ads-api.ft.com/v1/content/{{articleId}}',{{/articleId}}
+			{{^articleId}}"page": null,{{/articleId}}
+			"usePageZone": true
 		},
 		"collapseEmpty": true,
 		"responsive": {
