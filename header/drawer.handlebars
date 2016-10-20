@@ -1,11 +1,11 @@
-<div class="o-header__drawer alphaville-drawer" id="o-header-drawer" data-o-header-drawer="" data-o-header-drawer--no-js="">
+<div class="o-header__drawer alphaville-drawer" id="o-header-drawer" data-o-header-drawer="" data-o-header-drawer--no-js="" data-trackable="drawer">
 	<div class="o-header__drawer-inner">
 
 		<div class="o-header__drawer-tools">
-			<a class="o-header__drawer-tools-logo" href="http://www.ft.com">
+			<a class="o-header__drawer-tools-logo" href="http://www.ft.com" data-trackable="logo">
 				<span class="o-header__visually-hidden">Financial Times</span>
 			</a>
-			<button type="button" class="o-header__drawer-tools-close" aria-controls="o-header-drawer">
+			<button type="button" class="o-header__drawer-tools-close" aria-controls="o-header-drawer" data-trackable="close">
 				<span class="o-header__visually-hidden">Close</span>
 			</button>
 		</div>
@@ -13,14 +13,14 @@
 		<div class="o-header__drawer-search">
 			<form class="o-header__drawer-search-form" action="/search" role="search" aria-label="Site search">
 				<label class="o-header__visually-hidden" for="o-header-drawer-search-term">Search <abbr title="Alphaville">Alphaville</abbr></label>
-				<input class="o-header__drawer-search-term" id="o-header-drawer-search-term" name="q" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search Alphaville"></input>
-				<button class="o-header__drawer-search-submit" type="submit">
+				<input class="o-header__drawer-search-term" id="o-header-drawer-search-term" name="q" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search Alphaville" data-trackable="search-term"></input>
+				<button class="o-header__drawer-search-submit" type="submit" data-trackable="search-submit">
 					<span class="o-header__visually-hidden">Search</span>
 				</button>
 			</form>
 		</div>
 
-		<nav class="o-header__drawer-menu o-header__drawer-menu--primary" role="navigation" aria-label="Primary navigation">
+		<nav class="o-header__drawer-menu o-header__drawer-menu--primary" role="navigation" aria-label="Primary navigation" data-trackable="primary-nav">
 			<ul class="o-header__drawer-menu-list">
 				{{#meganavSections}}
 					{{#title}}
@@ -32,17 +32,17 @@
 					{{#meganavSectionItems}}
 						<li class="o-header__drawer-menu-item ">
 							{{^expandable}}
-								<a class="o-header__drawer-menu-link o-header__drawer-menu-link-- {{#lozenge}}alphaville-drawer-ml-title{{/lozenge}} {{#selected}}o-header__drawer-menu-link--selected{{/selected}}" href="{{{url}}}">
+								<a class="o-header__drawer-menu-link o-header__drawer-menu-link-- {{#lozenge}}alphaville-drawer-ml-title{{/lozenge}} {{#selected}}o-header__drawer-menu-link--selected{{/selected}}" href="{{{url}}}" data-trackable="{{name}}">
 									{{name}}
 									{{#lozenge}}<span class="alphaville-drawer-ml-lozenge-icon"></span>{{/lozenge}}
 								</a>
 							{{/expandable}}
 							{{#expandable}}
 								<div class="o-header__drawer-menu-toggle-wrapper">
-									<button class="o-header__drawer-menu-toggle o-header__drawer-menu-toggle--unselected" aria-controls="o-header-drawer-child-{{id}}">
+									<button class="o-header__drawer-menu-toggle o-header__drawer-menu-toggle--unselected" aria-controls="o-header-drawer-child-{{id}}" data-trackable="sub-level-toggle | {{name}}">
 										Show more {{name}} links
 									</button>
-									<a class="o-header__drawer-menu-link o-header__drawer-menu-link--parent {{#lozenge}}alphaville-drawer-ml-title{{/lozenge}} {{#selected}}o-header__drawer-menu-link--selected{{/selected}}" href="{{{url}}}" aria-label="Go to {{name}}">
+									<a class="o-header__drawer-menu-link o-header__drawer-menu-link--parent {{#lozenge}}alphaville-drawer-ml-title{{/lozenge}} {{#selected}}o-header__drawer-menu-link--selected{{/selected}}" href="{{{url}}}" aria-label="Go to {{name}}" data-trackable="{{name}}">
 										{{name}}
 										{{#lozenge}}<span class="alphaville-drawer-ml-lozenge-icon"></span>{{/lozenge}}
 									</a>
@@ -50,7 +50,7 @@
 								<ul class="o-header__drawer-menu-list o-header__drawer-menu-list--child" id="o-header-drawer-child-{{id}}">
 									{{#items}}
 										<li class="o-header__drawer-menu-item">
-											<a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="{{{url}}}" aria-label="Go to {{name}}">{{name}}</a>
+											<a class="o-header__drawer-menu-link o-header__drawer-menu-link--child o-header__drawer-menu-link--unselected" href="{{{url}}}" aria-label="Go to {{name}}" data-trackable="sub-level">{{name}}</a>
 										</li>
 									{{/items}}
 								</ul>
@@ -61,11 +61,11 @@
 			</ul>
 		</nav>
 
-		<nav class="o-header__drawer-menu o-header__drawer-menu--user" role="navigation" aria-label="User navigation">
+		<nav class="o-header__drawer-menu o-header__drawer-menu--user" role="navigation" aria-label="User navigation" data-trackable="user-nav">
 			<ul class="o-header__drawer-menu-list">
 				{{#userNav}}
 					<li class="o-header__drawer-menu-item {{liClass}}">
-						<a class="o-header__drawer-menu-link" href="{{{url}}}" {{{attributes}}}>{{name}}</a>
+						<a class="o-header__drawer-menu-link" href="{{{url}}}" {{{attributes}}} data-trackable="{{name}}">{{name}}</a>
 					</li>
 				{{/userNav}}
 			</ul>
