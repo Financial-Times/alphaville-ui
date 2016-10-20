@@ -15,12 +15,12 @@
 						<span class="o-header__visually-hidden">FT Alphaville</span>
 					</a>
 				</div>
-				<div class="o-header__top-column o-header__top-column--right" role="navigation" aria-label="Account and personalisation links">
+				<div class="o-header__top-column o-header__top-column--right" role="navigation" aria-label="Account and personalisation links" data-trackable="user-nav">
 					<div class="o-header__nav">
 						<ul class="o-header__nav-list o-header__nav-list--right">
 							{{#userNav}}
 								<li class="o-header__nav-item {{liClass}} alphaville-header__nav-item--user">
-									<a class="{{#if button}}o-header__nav-button{{else}}o-header__nav-link{{/if}}" href="{{{url}}}" {{{attributes}}}>{{name}}</a>
+									<a class="{{#if button}}o-header__nav-button{{else}}o-header__nav-link{{/if}}" href="{{{url}}}" {{{attributes}}} data-trackable="link">{{name}}</a>
 								</li>
 							{{/userNav}}
 
@@ -179,12 +179,12 @@
 					</a>
 				</div>
 
-				<div class="o-header__top-column o-header__top-column--right" role="navigation" aria-label="Account and personalisation links">
+				<div class="o-header__top-column o-header__top-column--right" role="navigation" aria-label="Account and personalisation links" data-trackable="user-nav">
 					<div class="o-header__nav">
 						<ul class="o-header__nav-list o-header__nav-list--right">
 							{{#userNav}}
-								<li class="o-header__nav-item {{liClass}} alphaville-header__nav-item--user" data-trackable="link">
-									<a class="{{#if button}}o-header__nav-button{{else}}o-header__nav-link{{/if}}" href="{{{url}}}" {{{attributes}}}>{{name}}</a>
+								<li class="o-header__nav-item {{liClass}} alphaville-header__nav-item--user">
+									<a class="{{#if button}}o-header__nav-button{{else}}o-header__nav-link{{/if}}" href="{{{url}}}" {{{attributes}}} data-trackable="link">{{name}}</a>
 								</li>
 							{{/userNav}}
 
