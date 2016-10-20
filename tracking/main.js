@@ -19,4 +19,5 @@ document.addEventListener("o.DOMContentLoaded", function() {
 			asset_type: 'page'
 		}
 	});
+	oTracking.click.init('cta');
 });
