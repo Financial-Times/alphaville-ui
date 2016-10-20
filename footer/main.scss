@@ -1,0 +1,26 @@
+.o-footer__more-from-ft {
+  border-top: 1px solid #b0b0b0;
+  border-bottom: 1px solid #b0b0b0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.o-footer__more-from-ft a {
+  line-height: 17px;
+  font-size: 15px;
+  color: white;
+}
+
+.o-footer__more-from-ft .o-icons-icon--arrow-right {
+  background-image: url("https://next-geebee.ft.com/image/v1/images/raw/fticon:arrow-right?source=o-icons&tint=%23FFFFFF,%23FFFFFF&format=svg");
+  background-image: url("https://next-geebee.ft.com/image/v1/images/raw/fticon:arrow-right?source=o-icons&tint=%23FFFFFF,%23FFFFFF&format=png&width=16") \9;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  background-color: transparent;
+  vertical-align: baseline;
+  margin-bottom: -4px;
+}
