@@ -1,17 +1,17 @@
 <header class="o-header o-header--simple alphaville-header" data-o-component="o-header" data-o-header--no-js="">
-	<div class="o-header__row o-header__top">
+	<div class="o-header__row o-header__top" data-trackable="header-top">
 		<div class="o-header__container">
 			<div class="o-header__top-wrapper">
 				<div class="o-header__top-column o-header__top-column--left">
-					<a href="#o-header-drawer" class="o-header__top-link o-header__top-link--menu" aria-controls="o-header-drawer">
+					<a href="#o-header-drawer" class="o-header__top-link o-header__top-link--menu" aria-controls="o-header-drawer" data-trackable="drawer-toggle">
 						<span class="o-header__top-link-label">Menu</span>
 					</a>
-					<a href="#o-header-search" class="o-header__top-link o-header__top-link--search" aria-controls="o-header-search-js">
+					<a href="#o-header-search" class="o-header__top-link o-header__top-link--search" aria-controls="o-header-search-js" data-trackable="search-toggle">
 						<span class="o-header__top-link-label">Search</span>
 					</a>
 				</div>
 				<div class="o-header__top-column o-header__top-column--center">
-					<a class="o-header__top-logo" href="http://www.ft.com" title="Go to Financial Times homepage">
+					<a class="o-header__top-logo" href="http://www.ft.com" title="Go to Financial Times homepage" data-trackable="logo">
 						<span class="o-header__visually-hidden">FT Alphaville</span>
 					</a>
 				</div>
@@ -25,7 +25,7 @@
 							{{/userNav}}
 
 							<li class="o-header__nav-item">
-								<a class="o-header__top-link o-header__top-link--myft" href="https://next.ft.com/myft">
+								<a class="o-header__top-link o-header__top-link--myft" href="https://next.ft.com/myft" data-trackable="my-ft">
 									<span class="o-header__visually-hidden">myFT</span>
 								</a>
 							</li>
@@ -36,65 +36,65 @@
 		</div>
 	</div>
 
-	<div id="o-header-search" class="o-header__row o-header__search o--if-no-js" role="search">
+	<div id="o-header-search" class="o-header__row o-header__search o--if-no-js" role="search" data-trackable="header-search">
 		<div class="o-header__container">
 			<form class="o-header__search-form" action="/search" role="search" aria-label="Site search">
 				<label class="o-header__visually-hidden" for="o-header-search-term">Search <abbr title="Alphaville">Alphaville</abbr></label>
-				<input class="o-header__search-term" id="o-header-search-term" name="q" type="text" placeholder="Search Alphaville"></input>
-				<button class="o-header__search-submit" type="submit">
+				<input class="o-header__search-term" id="o-header-search-term" name="q" type="text" placeholder="Search Alphaville" data-trackable="search-term" ></input>
+				<button class="o-header__search-submit" type="submit" data-trackable="search-submit">
 					Search
 				</button>
 			</form>
 		</div>
 	</div>
-	<div id="o-header-search-js" class="o-header__row o-header__search" role="search" data-o-header-search="">
+	<div id="o-header-search-js" class="o-header__row o-header__search" role="search" data-o-header-search="" data-trackable="header-search-js">
 		<div class="o-header__container">
 			<form class="o-header__search-form" action="/search" role="search" aria-label="Site search">
 				<label class="o-header__visually-hidden" for="o-header-search-term-js">Search <abbr title="Alphaville">Alphaville</abbr></label>
-				<input class="o-header__search-term" id="o-header-search-term-js" name="q" type="text" placeholder="Search Alphaville"></input>
-				<button class="o-header__search-submit" type="submit">
+				<input class="o-header__search-term" id="o-header-search-term-js" name="q" type="text" placeholder="Search Alphaville" data-trackable="search-term"></input>
+				<button class="o-header__search-submit" type="submit" data-trackable="search-submit">
 					Search
 				</button>
-				<button class="o-header__search-close" type="button" aria-controls="o-header-search-js">
+				<button class="o-header__search-close" type="button" aria-controls="o-header-search-js" data-trackable="close">
 					<span class="o-header__visually-hidden">Close</span>
 				</button>
 			</form>
 		</div>
 	</div>
 
-	<div class="o-header__subbrand alphaville-header__subbrand" data-o-header-subbrand="">
+	<div class="o-header__subbrand alphaville-header__subbrand" data-o-header-subbrand="" data-trackable="header-subbrand">
 		<div class="alphaville-header__subbrand-content">
-			<a class="" href="/" title="Go to FT Alphaville homepage">
+			<a class="" href="/" title="Go to FT Alphaville homepage" data-trackable="subbrand">
 				<span class="alphaville-header__subbrand-title">Alphaville</span>
 			</a>
 		</div>
 	</div>
 
-	<nav id="o-header-nav-mobile" class="o-header__row o-header__nav o-header__nav--mobile" role="navigation">
+	<nav id="o-header-nav-mobile" class="o-header__row o-header__nav o-header__nav--mobile" role="navigation" data-trackable="header-nav:mobile>
 		<div class="o-header__container">
 			{{#toggleArticleView}}
-				<div class="alphaville-header__toggle-article-view">
+				<div class="alphaville-header__toggle-article-view" data-trackable="home-toggle">
 					<span class="alphaville-header__toggle-article-view-label">view page as</span>
 					{{#grid}}
 						<span class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--grid" data-selected="true"></span>
 					{{/grid}}
 					{{^grid}}
-						<a href="{{url}}" class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--grid"></a>
+						<a href="{{url}}" class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--grid" data-trackable="grid"></a>
 					{{/grid}}
 					<span class="alphaville-header__toggle-article-view-item-separator"></span>
 					{{#list}}
 						<span class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--list" data-selected="true"></span>
 					{{/list}}
 					{{^list}}
-						<a href="{{url}}" class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--list"></a>
+						<a href="{{url}}" class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--list" data-trackable="list"></a>
 					{{/list}}
 				</div>
 			{{/toggleArticleView}}
 			
-			<ul class="o-header__nav-list alphaville-header__nav-list">
+			<ul class="o-header__nav-list alphaville-header__nav-list" data-trackable="primary-nav">
 				{{#mobileNavItems}}
 				<li class="o-header__nav-item {{liClass}}">
-					<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-selected="true"{{/selected}} {{{attributes}}}>
+					<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-selected="true"{{/selected}} {{{attributes}}} data-trackable="mega-menu-link">
 						{{{name}}}
 						{{#lozenge}}<span class="alphaville-header-ml-lozenge-icon"></span>{{/lozenge}}
 					</a>
@@ -104,31 +104,31 @@
 		</div>
 	</nav>
 
-	<nav id="o-header-nav-desktop" class="o-header__row o-header__nav o-header__nav--desktop" role="navigation">
+	<nav id="o-header-nav-desktop" class="o-header__row o-header__nav o-header__nav--desktop" role="navigation" data-trackable="header-nav:desktop">
 		<div class="o-header__container">
 			{{#toggleArticleView}}
-				<div class="alphaville-header__toggle-article-view">
+				<div class="alphaville-header__toggle-article-view" data-trackable="home-toggle">
 					<span class="alphaville-header__toggle-article-view-label">view page as</span>
 					{{#grid}}
 						<span class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--grid" data-selected="true"></span>
 					{{/grid}}
 					{{^grid}}
-						<a href="{{url}}" class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--grid"></a>
+						<a href="{{url}}" class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--grid" data-trackable="grid"></a>
 					{{/grid}}
 					<span class="alphaville-header__toggle-article-view-item-separator"></span>
 					{{#list}}
 						<span class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--list" data-selected="true"></span>
 					{{/list}}
 					{{^list}}
-						<a href="{{url}}" class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--list"></a>
+						<a href="{{url}}" class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--list" data-trackable="list"></a>
 					{{/list}}
 				</div>
 			{{/toggleArticleView}}
 
-			<ul class="o-header__nav-list alphaville-header__nav-list">
+			<ul class="o-header__nav-list alphaville-header__nav-list" data-trackable="primary-nav">
 				{{#navItems}}
 				<li class="o-header__nav-item {{liClass}}">
-					<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-selected="true"{{/selected}} id="o-header-link-">
+					<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-selected="true"{{/selected}} id="o-header-link-" data-trackable="link">
 						{{{name}}}
 						{{#lozenge}}<span class="alphaville-header-ml-lozenge-icon"></span>{{/lozenge}}
 					</a>
@@ -140,16 +140,16 @@
 </header>
 
 
-<header class="o-header o-header--simple o-header--sticky alphaville-header--sticky o--if-js" aria-hidden="true" role="presentation" data-o-component="o-header" data-o-header--sticky="">
-	<div class="o-header__row o-header__top">
+<header class="o-header o-header--simple o-header--sticky alphaville-header--sticky o--if-js" aria-hidden="true" role="presentation" data-o-component="o-header" data-o-header--sticky="" >
+	<div class="o-header__row o-header__top" data-trackable="header-sticky">
 		<div class="o-header__container">
 			<div class="o-header__top-wrapper">
 
 				<div class="o-header__top-column o-header__top-column--left">
-					<a href="#o-header-drawer" class="o-header__top-link o-header__top-link--menu" aria-controls="o-header-drawer" tabindex="-1">
+					<a href="#o-header-drawer" class="o-header__top-link o-header__top-link--menu" aria-controls="o-header-drawer" tabindex="-1" data-trackable="drawer-toggle">
 						<span class="o-header__top-link-label">Menu</span>
 					</a>
-					<a href="#o-header-search-sticky" class="o-header__top-link o-header__top-link--search" aria-controls="o-header-search-sticky" tabindex="-1">
+					<a href="#o-header-search-sticky" class="o-header__top-link o-header__top-link--search" aria-controls="o-header-search-sticky" tabindex="-1" data-trackable="search-toggle">
 						<span class="o-header__top-link-label">Search</span>
 					</a>
 				</div>
@@ -160,10 +160,10 @@
 					<div class="o-header__top-takeover">
 						<nav class="o-header__nav" role="navigation">
 							<div class="o-header__container">
-								<ul class="o-header__nav-list alphaville-header__nav-list">
+								<ul class="o-header__nav-list alphaville-header__nav-list" data-trackable="primary-nav">
 									{{#navItems}}
 									<li class="o-header__nav-item {{liClass}}">
-										<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-selected="true"{{/selected}} id="o-header-link-">
+										<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-selected="true"{{/selected}} id="o-header-link-" data-trackable="link">
 											{{{name}}}
 											{{#lozenge}}<span class="alphaville-header-ml-lozenge-icon"></span>{{/lozenge}}
 										</a>
@@ -174,7 +174,7 @@
 						</nav>
 					</div>
 
-					<a class="o-header__top-logo" href="/" title="Go to Financial Times homepage" tabindex="-1">
+					<a class="o-header__top-logo" href="/" title="Go to Financial Times homepage" tabindex="-1" data-trackable="logo">
 						<span class="o-header__visually-hidden">Financial Times</span>
 					</a>
 				</div>
@@ -183,13 +183,13 @@
 					<div class="o-header__nav">
 						<ul class="o-header__nav-list o-header__nav-list--right">
 							{{#userNav}}
-								<li class="o-header__nav-item {{liClass}} alphaville-header__nav-item--user">
+								<li class="o-header__nav-item {{liClass}} alphaville-header__nav-item--user" data-trackable="link">
 									<a class="{{#if button}}o-header__nav-button{{else}}o-header__nav-link{{/if}}" href="{{{url}}}" {{{attributes}}}>{{name}}</a>
 								</li>
 							{{/userNav}}
 
 							<li class="o-header__nav-item">
-								<a class="o-header__top-link o-header__top-link--myft" href="https://next.ft.com/myft">
+								<a class="o-header__top-link o-header__top-link--myft" href="https://next.ft.com/myft" data-trackable="my-ft">
 									<span class="o-header__visually-hidden">myFT</span>
 								</a>
 							</li>
@@ -200,15 +200,15 @@
 		</div>
 	</div>
 
-	<div id="o-header-search-sticky" class="o-header__row o-header__search o--if-js" role="search" data-o-header-search="">
+	<div id="o-header-search-sticky" class="o-header__row o-header__search o--if-js" role="search" data-o-header-search="" data-trackable="header-search-sticky">
 		<div class="o-header__container">
 			<form class="o-header__search-form" action="/search" role="search" aria-label="Site search">
 				<label class="o-header__visually-hidden" for="o-header-search-term-js">Search the <abbr title="FT Alphaville">FT Alphaville</abbr></label>
-				<input class="o-header__search-term" id="o-header-search-term-js" name="q" type="text" placeholder="Search the FT Alphaville"></input>
-				<button class="o-header__search-submit" type="submit">
+				<input class="o-header__search-term" id="o-header-search-term-js" name="q" type="text" placeholder="Search the FT Alphaville" data-trackable="search-term"></input>
+				<button class="o-header__search-submit" type="submit" data-trackable="search-submit">
 					Search
 				</button>
-				<button class="o-header__search-close" type="button" aria-controls="o-header-search-sticky">
+				<button class="o-header__search-close" type="button" aria-controls="o-header-search-sticky" data-trackable="close">
 					<span class="o-header__visually-hidden">Close</span>
 				</button>
 			</form>
