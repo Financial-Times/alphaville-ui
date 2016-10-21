@@ -18,12 +18,6 @@
 				<div class="o-header__top-column o-header__top-column--right" role="navigation" aria-label="Account and personalisation links" data-trackable="user-nav">
 					<div class="o-header__nav">
 						<ul class="o-header__nav-list o-header__nav-list--right">
-							{{#userNav}}
-								<li class="o-header__nav-item {{liClass}} alphaville-header__nav-item--user">
-									<a class="{{#if button}}o-header__nav-button{{else}}o-header__nav-link{{/if}}" href="{{{url}}}" {{{attributes}}} data-trackable="link">{{name}}</a>
-								</li>
-							{{/userNav}}
-
 							<li class="o-header__nav-item">
 								<a class="o-header__top-link o-header__top-link--myft" href="https://next.ft.com/myft" data-trackable="my-ft">
 									<span class="o-header__visually-hidden">myFT</span>
@@ -70,28 +64,9 @@
 		</div>
 	</div>
 
-	<nav id="o-header-nav-mobile" class="o-header__row o-header__nav o-header__nav--mobile" role="navigation" data-trackable="header-nav:mobile>
-		<div class="o-header__container">
-			{{#toggleArticleView}}
-				<div class="alphaville-header__toggle-article-view" data-trackable="home-toggle">
-					<span class="alphaville-header__toggle-article-view-label">view page as</span>
-					{{#grid}}
-						<span class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--grid" data-selected="true"></span>
-					{{/grid}}
-					{{^grid}}
-						<a href="{{url}}" class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--grid" data-trackable="grid"></a>
-					{{/grid}}
-					<span class="alphaville-header__toggle-article-view-item-separator"></span>
-					{{#list}}
-						<span class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--list" data-selected="true"></span>
-					{{/list}}
-					{{^list}}
-						<a href="{{url}}" class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--list" data-trackable="list"></a>
-					{{/list}}
-				</div>
-			{{/toggleArticleView}}
-			
-			<ul class="o-header__nav-list alphaville-header__nav-list" data-trackable="primary-nav">
+	<nav id="o-header-nav-mobile" class="o-header__row o-header__nav o-header__nav--mobile" role="navigation" data-trackable="header-nav:mobile">
+		<div class="o-header__container">			
+			<ul class="o-header__nav-list o-header__nav-list--left" data-trackable="primary-nav">
 				{{#mobileNavItems}}
 				<li class="o-header__nav-item {{liClass}}">
 					<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-selected="true"{{/selected}} {{{attributes}}} data-trackable="mega-menu-link">
@@ -101,11 +76,7 @@
 				</li>
 				{{/mobileNavItems}}
 			</ul>
-		</div>
-	</nav>
 
-	<nav id="o-header-nav-desktop" class="o-header__row o-header__nav o-header__nav--desktop" role="navigation" data-trackable="header-nav:desktop">
-		<div class="o-header__container">
 			{{#toggleArticleView}}
 				<div class="alphaville-header__toggle-article-view" data-trackable="home-toggle">
 					<span class="alphaville-header__toggle-article-view-label">view page as</span>
@@ -124,8 +95,12 @@
 					{{/list}}
 				</div>
 			{{/toggleArticleView}}
+		</div>
+	</nav>
 
-			<ul class="o-header__nav-list alphaville-header__nav-list" data-trackable="primary-nav">
+	<nav id="o-header-nav-desktop" class="o-header__row o-header__nav o-header__nav--desktop" role="navigation" data-trackable="header-nav:desktop">
+		<div class="o-header__container">
+			<ul class="o-header__nav-list o-header__nav-list--left" data-trackable="primary-nav">
 				{{#navItems}}
 				<li class="o-header__nav-item {{liClass}}">
 					<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-selected="true"{{/selected}} id="o-header-link-" data-trackable="link">
@@ -135,6 +110,33 @@
 				</li>
 				{{/navItems}}
 			</ul>
+
+			<ul class="o-header__nav-list o-header__nav-list--right" data-trackable="user-nav">
+				{{#userNav}}
+					<li class="o-header__nav-item {{liClass}} alphaville-header__nav-item--user">
+						<a class="{{#if button}}o-header__nav-button{{else}}o-header__nav-link{{/if}}" href="{{{url}}}" {{{attributes}}} data-trackable="{{name}}">{{name}}</a>
+					</li>
+				{{/userNav}}
+			</ul>
+
+			{{#toggleArticleView}}
+				<div class="alphaville-header__toggle-article-view" data-trackable="home-toggle">
+					<span class="alphaville-header__toggle-article-view-label">view page as</span>
+					{{#grid}}
+						<span class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--grid" data-selected="true"></span>
+					{{/grid}}
+					{{^grid}}
+						<a href="{{url}}" class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--grid" data-trackable="grid"></a>
+					{{/grid}}
+					<span class="alphaville-header__toggle-article-view-item-separator"></span>
+					{{#list}}
+						<span class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--list" data-selected="true"></span>
+					{{/list}}
+					{{^list}}
+						<a href="{{url}}" class="alphaville-header__toggle-article-view-item alphaville-header__toggle-article-view--list" data-trackable="list"></a>
+					{{/list}}
+				</div>
+			{{/toggleArticleView}}
 		</div>
 	</nav>
 </header>
@@ -160,7 +162,7 @@
 					<div class="o-header__top-takeover">
 						<nav class="o-header__nav" role="navigation">
 							<div class="o-header__container">
-								<ul class="o-header__nav-list alphaville-header__nav-list" data-trackable="primary-nav">
+								<ul class="o-header__nav-list" data-trackable="primary-nav">
 									{{#navItems}}
 									<li class="o-header__nav-item {{liClass}}">
 										<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-selected="true"{{/selected}} id="o-header-link-" data-trackable="link">
@@ -182,12 +184,6 @@
 				<div class="o-header__top-column o-header__top-column--right" role="navigation" aria-label="Account and personalisation links" data-trackable="user-nav">
 					<div class="o-header__nav">
 						<ul class="o-header__nav-list o-header__nav-list--right">
-							{{#userNav}}
-								<li class="o-header__nav-item {{liClass}} alphaville-header__nav-item--user">
-									<a class="{{#if button}}o-header__nav-button{{else}}o-header__nav-link{{/if}}" href="{{{url}}}" {{{attributes}}} data-trackable="link">{{name}}</a>
-								</li>
-							{{/userNav}}
-
 							<li class="o-header__nav-item">
 								<a class="o-header__top-link o-header__top-link--myft" href="https://next.ft.com/myft" data-trackable="my-ft">
 									<span class="o-header__visually-hidden">myFT</span>

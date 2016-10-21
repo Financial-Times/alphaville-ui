@@ -52,29 +52,18 @@
 
 
 .alphaville-header__toggle-article-view {
-	position: absolute;
-	top: 0;
-	right: 0;
+	float: right;
 	line-height: 20px;
 	padding: 8px 0 0;
 	display: none;
 
 	@include oGridRespondTo(S) {
 		display: block;
-		right: oGridGutter(S);
 	}
+}
 
-	@include oGridRespondTo(M) {
-		right: oGridGutter(M);
-	}
-
-	@include oGridRespondTo(L) {
-		right: oGridGutter(L);
-	}
-
-	@include oGridRespondTo(XL) {
-		right: oGridGutter(XL);
-	}
+.o-header__nav--desktop .alphaville-header__toggle-article-view {
+	margin-right: 20px;
 }
 
 .alphaville-header--sticky .alphaville-header__toggle-article-view {
@@ -108,7 +97,7 @@
 	@include oGridRespondTo(M) {
 		display: inline-block;
 		position: relative;
-		top: -7px;
+		top: -9px;
 		font-style: italic;
 	}
 }
