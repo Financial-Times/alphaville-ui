@@ -1,7 +1,7 @@
 .alphaville-ad-top {
 	display: none;
 
-	@include oGridRespondTo(L) {
+	@include oGridRespondTo(M) {
 		display: block;
 		padding: 10px 0;
 		line-height: 0;
