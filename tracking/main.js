@@ -3,7 +3,8 @@ function otrackinginit() {
 	const config_data = {
 		server: 'https://spoor-api.ft.com/px.gif',
 		context: {
-			product: 'alphaville'
+			product: 'next',
+			app: 'alphaville'
 		},
 		user: {
 			ft_session: oTracking.utils.getValueFromCookie(/FTSession=([^;]+)/)
