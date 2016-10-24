@@ -9,6 +9,14 @@
 	}
 }
 
+.alphaville-ad-stream {
+	display: block;
+
+	@include oGridRespondTo(L) {
+		display: none;
+	}
+}
+
 .alphaville-ad-mpu-mobile {
 	display: block;
 
@@ -25,14 +33,14 @@
 	}
 }
 
-.alphaville-ad-homepage-small {
+.alphaville-ad-grid-small {
 	@include oGridColspan(
 		(default: 12, M: hide)
 	);
 
 	display: block;
 }
-.alphaville-ad-homepage-large {
+.alphaville-ad-grid-large {
 	@include oGridColspan(
 		(default: hide, M: 12)
 	);
@@ -40,7 +48,7 @@
 	display: none;
 }
 
-.alphaville-ad-homepage {
+.alphaville-ad-grid {
 	@include oGridColspan(
 		(default: 12)
 	);
