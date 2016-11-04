@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="core {{#userIsLoggedIn}}alphaville-logged-in{{/userIsLoggedIn}}{{^userIsLoggedIn}}alphaville-logged-out{{/userIsLoggedIn}}">
+<html class="core">
 	<head>
 		<title>{{ title }}</title>
 
@@ -20,6 +20,12 @@
 			features in all browsers, see caniuse.com
 		-->
 		<script>
+			if (document.cookie.indexOf('FTSession') !== -1) {
+				document.documentElement.className += ' alphaville-logged-in';
+			} else {
+				document.documentElement.className += ' alphaville-logged-out';
+			}
+
 			var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);
 
 			if (cutsTheMustard) {
