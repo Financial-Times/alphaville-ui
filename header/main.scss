@@ -2,6 +2,10 @@
 	.ml-live-lozenge-icon {
 		display: none;
 	}
+
+	[data-o-header-drawer--js] .o-header__drawer-menu-list--child[aria-hidden=false] {
+		max-height: 1000px;
+	}
 }
 
 
