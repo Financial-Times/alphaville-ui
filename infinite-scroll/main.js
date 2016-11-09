@@ -96,7 +96,7 @@ function InfiniteScroll (config) {
 	};
 
 	const onScroll = function (evt) {
-		if (evt.detail.scrollHeight - (evt.detail.scrollTop + oViewport.getSize().height) < 400) {
+		if (evt.detail.scrollHeight - (evt.detail.scrollTop + oViewport.getSize().height) < 600) {
 			loadNextPage();
 		}
 	};
