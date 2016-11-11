@@ -20,7 +20,7 @@
 			features in all browsers, see caniuse.com
 		-->
 		<script>
-			if (document.cookie.indexOf('FTSession') !== -1) {
+			if (document.cookie.match('FTSession=[^;]+')) {
 				document.documentElement.className += ' alphaville-logged-in';
 			} else {
 				document.documentElement.className += ' alphaville-logged-out';
