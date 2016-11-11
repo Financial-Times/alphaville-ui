@@ -19,21 +19,3 @@ exports.utils = {
 	dom: require('./utils/dom'),
 	httpRequest: require('./utils/httpRequest')
 };
-
-if (document.cookie.indexOf('FTSession') !== -1) {
-	if (document.documentElement.classList.contains('alphaville-logged-out')) {
-		document.documentElement.classList.remove('alphaville-logged-out');
-	}
-
-	if (!document.documentElement.classList.contains('alphaville-logged-in')) {
-		document.documentElement.classList.add('alphaville-logged-in');
-	}
-} else {
-	if (document.documentElement.classList.contains('alphaville-logged-in')) {
-		document.documentElement.classList.remove('alphaville-logged-in');
-	}
-
-	if (!document.documentElement.classList.contains('alphaville-logged-out')) {
-		document.documentElement.classList.add('alphaville-logged-out');
-	}
-}

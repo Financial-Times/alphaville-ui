@@ -22,8 +22,10 @@
 		<script>
 			if (document.cookie.match('FTSession=[^;]+')) {
 				document.documentElement.className += ' alphaville-logged-in';
+				document.documentElement.classList.remove('alphaville-logged-out');
 			} else {
 				document.documentElement.className += ' alphaville-logged-out';
+				document.documentElement.classList.remove('alphaville-logged-in');
 			}
 
 			var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);
