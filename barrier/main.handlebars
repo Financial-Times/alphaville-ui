@@ -4,14 +4,14 @@
     {{#if extraInfo}}
         <p class="extra-info">{{extraInfo}}</p>
     {{/if}}
-    {{#register}}
+    {{#if register}}
         <a class="o-buttons o-buttons--big o-buttons--standout" role="button" href="{{register}}" data-trackable="register">Register</a>
-    {{/register}}
+    {{/if}}
 	<a class="o-buttons o-buttons--big" role="button" href="{{loginUrl}}" data-trackable="sign-in">{{loginText}}</a>
 	<p>
-        {{#subscriptions}}
+        {{#if subscriptions}}
             Ready to subscribe, <a class="barrier-link" href="{{subscriptions}}" data-trackable="subscription">View our subscription options</a>
-        {{/subscriptions}}
+        {{/if}}
 	</p>
 	<div class="barrier-img">
 		<img src="{{@root/assetsBowerBasePath}}/alphaville-ui/barrier/img/alphaville-barrier.jpg" />
