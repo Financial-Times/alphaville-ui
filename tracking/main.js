@@ -14,11 +14,18 @@ function otrackinginit() {
 }
 
 document.addEventListener("o.DOMContentLoaded", function() {
-	otrackinginit();
-	oTracking.page({
+	var article = document.querySelectorAll('article.article__body.n-content-body');
+	var uuid = (article.length > 0)? article[0].getAttribute('data-content-id'): false;
+	console.log('>>> uuid: ', uuid);
+	var trackingPageConfig = {
 		content: {
 			asset_type: 'page'
 		}
-	});
+	}
+	if (uuid) {
+		trackingPageConfig.content.uuid = uuid;
+	}
+	otrackinginit();
+	oTracking.page(trackingPageConfig);
 	oTracking.click.init('cta');
 });
