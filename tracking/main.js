@@ -18,7 +18,8 @@ document.addEventListener("o.DOMContentLoaded", function() {
 	var uuid = (article.length > 0)? article[0].getAttribute('data-content-id'): false;
 	var trackingPageConfig = {
 		content: {
-			asset_type: 'page'
+			asset_type: 'alphaville',
+			section: 'Brand.FT Alphaville'
 		}
 	}
 	if (uuid) {
