@@ -126,7 +126,10 @@
 	<body data-trackable="alphaville">
 		{{> alphaville-ui/tracking/main}}
 
-		{{> alphaville-ui/ads/templates/top}}
+		{{#unless hideTopAd}}
+			{{> alphaville-ui/ads/templates/top}}
+		{{/unless}}
+
 		{{#headerConfig}}
 			{{> alphaville-ui/header/main}}
 		{{/headerConfig}}
@@ -138,6 +141,9 @@
 		{{#headerConfig}}
 			{{> alphaville-ui/header/drawer}}
 		{{/headerConfig}}
-		{{> alphaville-ui/footer/main}}
+
+		{{#unless hideFooter}}
+			{{> alphaville-ui/footer/main}}
+		{{/unless}}
 	</body>
 </html>
