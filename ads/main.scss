@@ -27,6 +27,7 @@
 
 .alphaville-ad-dmpu-desktop {
 	display: none;
+	margin-bottom: 15px;
 
 	@include oGridRespondTo(L) {
 		display: block;
