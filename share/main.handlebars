@@ -1,0 +1,35 @@
+<div>
+	<div class="article__share article__share--{{position}} clearfix" data-trackable="share-{{position}}">
+		<div data-o-component="o-share" class="o-share clearfix" data-o-share--js="">
+			<ul>
+				<li class="o-share__action o-share__action--twitter">
+					<a target="_blank" href="https://twitter.com/intent/tweet?url={{article.webUrl}}&amp;text={{article.title}}&amp;via=FT" data-trackable="twitter"><i>Twitter</i></a>
+				</li>
+				<li class="o-share__action o-share__action--facebook">
+					<a target="_blank" href="http://www.facebook.com/sharer.php?u={{article.webUrl}}&amp;t={{article.title}}" data-trackable="facebook"><i>Facebook</i></a>
+				</li>
+				<li class="o-share__action o-share__action--linkedin">
+					<a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{article.webUrl}}&amp;title={{article.title}}&amp;source=Financial+Times" data-trackable="linkedin"><i>LinkedIn</i></a>
+				</li>
+				{{!-- li class="article__share-action--email o-share__action o-share__action--email">
+					<button data-n-article-email-clickable="" data-n-article-email-container="top" data-n-article-email-free-article="false" data-trackable="email"><i>Email</i></button>
+				</li --}}
+			</ul>
+		</div>
+
+		<a class="article__share__print article__share-item" href="javascript:window.print()" data-trackable="print">
+			<span class="alphaville-visually-hidden">Print this page</span>
+		</a>
+		{{!-- form class="n-myft-ui n-myft-ui--save" method="POST" data-content-id="ce9e7eb0-cfe5-3442-a38d-97ca7351e200" data-myft-ui="saved" action="/__myft/api/core/saved/content/ce9e7eb0-cfe5-3442-a38d-97ca7351e200?method=put">
+			<button type="submit" class="n-myft-ui__button" data-trackable="save-for-later" data-alternate-label="Saved to myFT" data-alternate-text="Saved" data-content-id="ce9e7eb0-cfe5-3442-a38d-97ca7351e200" aria-label="Save to myFT" title="Save to myFT">Save</button>
+		</form --}}
+		
+		{{#article.comments.enabled}}
+			{{^hideCommentCount}}
+			<a href="#comments" class="article__share__comments article__share-item" data-o-component="o-comment-count" data-o-comment-count-config-article-id="{{article.id}}" data-o-comment-count-config-template="{count}" data-trackable="comment-count"></a>
+			{{/hideCommentCount}}
+		{{/article.comments.enabled}}
+	</div>
+	<div data-n-article-email-{{position}}-container=""></div>
+	<div class="article__share-bottom-gutter--{{position}}"></div>
+</div>

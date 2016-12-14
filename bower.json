@@ -23,7 +23,8 @@
     "o-tracking": "^1.1.15",
     "o-fonts": "^2.1.3",
     "o-viewport": "^3.0.0",
-    "o-overlay": "^1.0.0"
+    "o-overlay": "^1.0.0",
+    "o-share": "^2.1.4"
   },
   "license": "MIT",
   "ignore": [

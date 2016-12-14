@@ -28,6 +28,8 @@ $o-overlay-is-silent: false;
 
 @import 'o-colors/main';
 
+@import "o-share/main";
+
 @import './generic/main';
 
 @import './content-box/main';
@@ -42,3 +44,4 @@ $o-overlay-is-silent: false;
 @import './footer/main';
 @import './twitter-widget/main';
 @import './pagination/main';
+@import './share/main';

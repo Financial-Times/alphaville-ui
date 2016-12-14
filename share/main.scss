@@ -1,0 +1,124 @@
+@include oShareBase(o-share);
+@include oShareActionIcon(facebook, o-share);
+@include oShareActionIcon(twitter, o-share);
+@include oShareActionIcon(whatsapp, o-share);
+@include oShareActionIcon(linkedin, o-share);
+@include oShareActionIcon(email, o-share);
+
+.article__share {
+	position: relative;
+	margin-top: 15px;
+	border-top: 1px solid oColorsGetPaletteColor('warm-3');
+	border-bottom: 1px solid oColorsGetPaletteColor('warm-3');
+
+	a {
+		@include oColorsFor(link, text);
+		text-decoration: none;
+	}
+
+	&__count {
+		@include oTypographySansSize(s);
+		position: relative;
+		top: -5px;
+		display: none;
+
+		@include oGridRespondTo(S) {
+			display: inline;
+		}
+	}
+
+	&__comments {
+		@include oTypographySansSize(s);
+
+		&:before {
+			@include oIconsGetIcon('comment', oColorsGetPaletteColor('cold-1'), 18);
+			content: '';
+			position: relative;
+			margin-right: 5px;
+			vertical-align: middle;
+		}
+	}
+
+	&__print {
+		display: none;
+
+		@include oGridRespondTo(M) {
+			display: block;
+		}
+
+		&:before {
+			@include oIconsGetIcon('printer', oColorsGetPaletteColor('cold-1'), 18);
+			content: '';
+			position: relative;
+			margin-right: 5px;
+			vertical-align: middle;
+		}
+	}
+
+	&--bottom {
+		clear: left;
+		margin-bottom: 15px;
+	}
+
+	&-item {
+		height: 24px;
+		padding: 6px;
+		line-height: 24px;
+		vertical-align: middle;
+		float: right;
+		margin-right: 16px;
+	}
+
+	.o-share {
+		display: block;
+		float: left;
+	}
+
+	/*
+	.o-share__action a {
+		border-bottom-width: 0;
+	}
+
+	.o-share__action button {
+		display: block;
+		border: 0;
+		background-color: transparent;
+	}
+
+	.o-share__action a,
+	.o-share__action button {
+		padding: 0 6px;
+	}
+
+	.o-share__action--twitter a {
+		padding-left: 0;
+	}
+
+	.o-share__action--whatsapp {
+		@include oGridColspan((S: hide));
+		padding: 0;
+	}
+	*/
+
+	.n-myft-ui__button {
+		min-height: 24px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+}
+
+.article__main .email-article .email-article__border {
+	border-top: 0;
+}
+
+.core .article__main .article__share-action--email {
+	display: none;
+}
+
+.article__main .article__share-bottom-gutter--top {
+	margin-bottom: 15px;
+}
+
+.article__main .article__share-bottom-gutter--bottom {
+	margin-bottom: 30px;
+}
