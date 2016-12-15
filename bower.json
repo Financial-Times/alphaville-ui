@@ -24,7 +24,8 @@
     "o-fonts": "^2.1.3",
     "o-viewport": "^3.0.0",
     "o-overlay": "^1.0.0",
-    "o-share": "^2.1.4"
+    "o-share": "^2.1.4",
+    "o-card": "^2.1.1"
   },
   "license": "MIT",
   "ignore": [
