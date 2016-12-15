@@ -26,6 +26,9 @@ $o-icons-is-silent: false;
 $o-overlay-is-silent: false;
 @import 'o-overlay/main';
 
+$o-card-is-silent: false;
+@import 'o-card/main';
+
 @import 'o-colors/main';
 
 @import "o-share/main";
