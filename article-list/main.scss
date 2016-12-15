@@ -1,0 +1,39 @@
+.alphaville-article-list {
+	.alphaville-list-time {
+		margin-top: 20px;
+
+		.alphaville-list-time-label {
+			font-size: 16px;
+			line-height: 18px;
+			font-weight: 600;
+		}
+
+		.alphaville-list-time-date {
+			font-size: 16px;
+			line-height: 22px;
+			color: oColorsGetPaletteColor('warm-6');
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
+
+	.alphaville-card {
+		background: none;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.alphaville-ad-stream {
+		padding: 20px 0;
+		border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
+	}
+
+	.alphaville-card-container {
+		border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
+		padding: 10px 0 20px;
+
+		a {
+			border-bottom: 0;
+		}
+	}
+}
