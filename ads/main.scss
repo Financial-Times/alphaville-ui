@@ -56,6 +56,27 @@
 }
 
 
+.alphaville-ad-longroom-mobile-mpu {
+	display: block;
+
+	@include oGridRespondTo(M) {
+		display: none;
+	}
+}
+
+.alphaville-ad-longroom-tablet-leaderboard {
+	display: none;
+
+	@include oGridRespondTo(M) {
+		display: block;
+	}
+
+	@include oGridRespondTo(L) {
+		display: none;
+	}
+}
+
+
 
 .o-ads--empty,
 .o-ads[data-o-ads-loaded=false] {
