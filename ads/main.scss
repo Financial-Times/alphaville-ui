@@ -64,7 +64,8 @@
 	}
 }
 
-.alphaville-ad-longroom-tablet-leaderboard {
+.alphaville-ad-longroom-tablet-leaderboard,
+.alphaville-ad-longroom-tablet-mpu {
 	display: none;
 
 	@include oGridRespondTo(M) {
