@@ -32,9 +32,9 @@
 
 	<div id="o-header-search" class="o-header__row o-header__search o--if-no-js" role="search" data-trackable="header-search">
 		<div class="o-header__container">
-			<form class="o-header__search-form" action="/search" role="search" aria-label="Site search">
-				<label class="o-header__visually-hidden" for="o-header-search-term">Search <abbr title="Alphaville">Alphaville</abbr></label>
-				<input class="o-header__search-term" id="o-header-search-term" name="q" type="text" placeholder="Search Alphaville" data-trackable="search-term" ></input>
+			<form class="o-header__search-form" action="{{#if searchUrl}}{{searchUrl}}{{else}}/search{{/if}}" role="search" aria-label="Site search">
+				<label class="o-header__visually-hidden" for="o-header-search-term">Search <abbr title="{{#if searchTitle}}{{searchTitle}}{{else}}Alphaville{{/if}}">{{#if searchTitle}}{{searchTitle}}{{else}}Alphaville{{/if}}</abbr></label>
+				<input class="o-header__search-term" id="o-header-search-term" name="q" type="text" placeholder="Search {{#if searchTitle}}{{searchTitle}}{{else}}Alphaville{{/if}}" data-trackable="search-term" ></input>
 				<button class="o-header__search-submit" type="submit" data-trackable="search-submit">
 					Search
 				</button>
@@ -43,9 +43,9 @@
 	</div>
 	<div id="o-header-search-js" class="o-header__row o-header__search" role="search" data-o-header-search="" data-trackable="header-search-js">
 		<div class="o-header__container">
-			<form class="o-header__search-form" action="/search" role="search" aria-label="Site search">
-				<label class="o-header__visually-hidden" for="o-header-search-term-js">Search <abbr title="Alphaville">Alphaville</abbr></label>
-				<input class="o-header__search-term" id="o-header-search-term-js" name="q" type="text" placeholder="Search Alphaville" data-trackable="search-term"></input>
+			<form class="o-header__search-form" action="{{#if searchUrl}}{{searchUrl}}{{else}}/search{{/if}}" role="search" aria-label="Site search">
+				<label class="o-header__visually-hidden" for="o-header-search-term-js">Search <abbr title="{{#if searchTitle}}{{searchTitle}}{{else}}Alphaville{{/if}}">{{#if searchTitle}}{{searchTitle}}{{else}}Alphaville{{/if}}</abbr></label>
+				<input class="o-header__search-term" id="o-header-search-term-js" name="q" type="text" placeholder="Search {{#if searchTitle}}{{searchTitle}}{{else}}Alphaville{{/if}}" data-trackable="search-term"></input>
 				<button class="o-header__search-submit" type="submit" data-trackable="search-submit">
 					Search
 				</button>
@@ -198,9 +198,9 @@
 
 	<div id="o-header-search-sticky" class="o-header__row o-header__search o--if-js" role="search" data-o-header-search="" data-trackable="header-search-sticky">
 		<div class="o-header__container">
-			<form class="o-header__search-form" action="/search" role="search" aria-label="Site search">
-				<label class="o-header__visually-hidden" for="o-header-search-term-js">Search the <abbr title="FT Alphaville">FT Alphaville</abbr></label>
-				<input class="o-header__search-term" id="o-header-search-term-js" name="q" type="text" placeholder="Search the FT Alphaville" data-trackable="search-term"></input>
+			<form class="o-header__search-form" action="{{#if searchUrl}}{{searchUrl}}{{else}}/search{{/if}}" role="search" aria-label="Site search">
+				<label class="o-header__visually-hidden" for="o-header-search-term-js">Search <abbr title="{{#if searchTitle}}{{searchTitle}}{{else}}Alphaville{{/if}}">{{#if searchTitle}}{{searchTitle}}{{else}}Alphaville{{/if}}</abbr></label>
+				<input class="o-header__search-term" id="o-header-search-term-js" name="q" type="text" placeholder="Search {{#if searchTitle}}{{searchTitle}}{{else}}Alphaville{{/if}}" data-trackable="search-term"></input>
 				<button class="o-header__search-submit" type="submit" data-trackable="search-submit">
 					Search
 				</button>
