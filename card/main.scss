@@ -70,6 +70,8 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card__timestamp {
 	@include oCardTimestamp;
+	display:inline-block;
+
 }
 
 
@@ -153,6 +155,20 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	bottom: 0;
 	left: 0;
 	width: 100%;
+	p.article__byline {
+		display: inline-block;
+		font-family: MetricWeb, sans-serif;
+		color:#333333;
+		line-height: 12px;
+		font-size: 12px;
+		.article__byline-tag {
+			font-family: MetricWeb, sans-serif;
+			color:#9e2f50;
+			font-weight: 600;
+			line-height: 12px;
+			font-size: 12px;		
+		}
+	}
 }
 
 .alphaville-card__content {
