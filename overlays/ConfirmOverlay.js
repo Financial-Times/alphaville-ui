@@ -44,4 +44,24 @@ function ConfirmOverlay (title, text) {
 	});
 }
 
+document.addEventListener('o.DOMContentLoaded', () => {
+	const confirmElements = document.querySelectorAll('a[data-component="alphaville-confirm"]');
+
+	for (let i = 0; i < confirmElements.length; i++) {
+		const el = confirmElements[i];
+
+		if (el.getAttribute('data-alphaville-confirm-title') && el.getAttribute('data-alphaville-confirm-message')) {
+			el.addEventListener('click', (evt) => {
+				evt.preventDefault();
+
+				new ConfirmOverlay(el.getAttribute('data-alphaville-confirm-title'), el.getAttribute('data-alphaville-confirm-message')).then(decision => {
+					if (decision === true) {
+						window.location.href = el.href;
+					}
+				});
+			});
+		}
+	}
+});
+
 module.exports = ConfirmOverlay;
