@@ -13,7 +13,16 @@
 		},
 		"krux": {
 			"limit": 50,
-			"id": "KHUSeE3x"
+			"id": "KHUSeE3x",
+			{{#unless articleId}}
+				"attributes": {
+					"page": {
+						"key": "sections",
+						"name": "sections",
+						"values": [{{title}}]
+					}
+				}
+			{{/unless}}
 		},
 		"collapseEmpty": true,
 		"responsive": {
