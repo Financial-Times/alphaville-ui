@@ -13,7 +13,7 @@
 		},
 		"krux": {
 			"limit": 50,
-			{{^article}}
+			{{#unless articleId}}
 				"attributes": {
 					"page": {
 						"key": "sections",
@@ -21,7 +21,7 @@
 						"values": [{{title}}]
 					}
 				},
-			{{/article}}
+			{{/unless}}
 			"id": "KHUSeE3x"
 		},
 		"collapseEmpty": true,
