@@ -13,6 +13,15 @@
 		},
 		"krux": {
 			"limit": 50,
+			{{#unless article}}
+				"attributes": {
+					"page": {
+						"key": "sections",
+						"name": "sections",
+						"values": [{{title}}]
+					}
+				},
+			{{/unless}}
 			"id": "IgnVxTJW"
 		},
 		"collapseEmpty": true,
