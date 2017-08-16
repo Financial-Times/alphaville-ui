@@ -1,3 +1,26 @@
+<!-- Floodlight pixel -->
+<script>
+	(function () {
+		const isAnonymous = !/FTSession/.test(document.cookie);
+		const spoorId = /spoor-id=([^;]+)/.exec(document.cookie);
+		const host = 'https://4235225.fls.doubleclick.net/activityi;src=4235225';
+
+		const spoor = (spoorId) ? spoorId[1] : '';
+		const ts = Date.now();
+
+		const addPixel = (src) => {
+			const i = new Image();
+			i.src = src;
+		};
+
+		if (spoorId) {
+			if (isAnonymous) {
+				addPixel(`${host};type=homeo886;cat=ft-ne000;u10=${spoor};dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=${ts};num=1`);
+			}
+		}
+	}());
+</script>
+
 <!-- Add fallback if browsers don't cut the mustard -->
 <div class="o-tracking o--if-no-js" data-o-component="o-tracking">
     <div style="background:url('https://spoor-api.ft.com/px.gif?data=%7B%22category%22%3A%22page%22%2C%20%22action%22%3A%22view%22%2C%20%22system%22%3A%7B%22apiKey%22%3A%22qUb9maKfKbtpRsdp0p2J7uWxRPGJEP%22%2C%22source%22%3A%22o-tracking%22%2C%22version%22%3A%221.0.0%22%7D%2C%22context%22%3A%7B%22product%22%3A%22next%22%2C%22app%22%3A%22alphaville%22%2C%22content%22%3A%7B%22asset_type%22%3A%22page%22%7D%7D%7D');"></div>
