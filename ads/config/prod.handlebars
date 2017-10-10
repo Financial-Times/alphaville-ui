@@ -13,13 +13,21 @@
 		},
 		"krux": {
 			"limit": 50,
-			{{#unless article}}
+			{{#if adsTitle}}
 				"attributes": {
 					"page": {
-						"sections": ["{{title}}"]
+						"sections": ["{{adsTitle}}"]
 					}
 				},
-			{{/unless}}
+			{{else}}
+				{{#unless article}}
+					"attributes": {
+						"page": {
+							"sections": ["{{title}}"]
+						}
+					},
+				{{/unless}}
+			{{/if}}
 			"id": "KHUSeE3x"
 		},
 		"collapseEmpty": true,
