@@ -15,6 +15,7 @@ exports['InfiniteScroll'] = require('./infinite-scroll/main');
 
 exports['AlertOverlay'] = require('./overlays/AlertOverlay');
 exports['ConfirmOverlay'] = require('./overlays/ConfirmOverlay');
+exports['FormOverlay'] = require('./overlays/FormOverlay');
 
 exports.utils = {
 	dom: require('./utils/dom'),

@@ -6,11 +6,19 @@
 	margin-bottom: 15px;
 }
 
+.alphaville-overlay-form-content {
+	min-width: 300px;
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 15px;
+}
+
 .alphaville-overlay-buttons {
 	text-align: center;
 
 	.alphaville-overlay-ok,
-	.alphaville-overlay-cancel {
+	.alphaville-overlay-cancel,
+	.alphaville-overlay-submit {
 		min-width: 70px;
 	}
 }

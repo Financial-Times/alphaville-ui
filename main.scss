@@ -45,6 +45,9 @@ $o-icons-is-silent: false;
 $o-overlay-is-silent: false;
 @import 'o-overlay/main';
 
+$o-forms-is-silent: false;
+@import 'o-forms/main';
+
 $o-card-is-silent: false;
 @import 'o-card/main';
 

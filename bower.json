@@ -25,7 +25,8 @@
     "o-viewport": "^3.0.0",
     "o-overlay": "^1.0.0",
     "o-share": "^2.1.4",
-    "o-card": "^2.1.1"
+    "o-card": "^2.1.1",
+    "o-forms": "^2.0.5"
   },
   "license": "MIT",
   "ignore": [
