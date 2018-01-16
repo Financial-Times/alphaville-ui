@@ -49,8 +49,9 @@ function generateFormHtml (fields) {
 
 function FormOverlay (options) {
 	const title = options.title || '';
-	const submitLabel = options.submitLabel || 'Submit';
+	const submitLabel = options.submitLabel;
 	const fields = options.fields || {};
+	const modal = options.modal === false ? false : true;
 
 	return new Promise((resolve) => {
 		const overlayInstance = new Overlay("alphaville_confirm", {
@@ -58,12 +59,12 @@ function FormOverlay (options) {
 				<form>
 					<div class="alphaville-overlay-form-content">${generateFormHtml(fields)}</div>
 					<div class="alphaville-overlay-buttons">
-						<button type="submit" class="alphaville-overlay-submit o-buttons o-buttons--standout">${submitLabel}</button>
-						<button type="button" class="alphaville-overlay-cancel o-buttons">Cancel</button>
+						${submitLabel ? `<button type="submit" class="alphaville-overlay-submit o-buttons o-buttons--standout">${submitLabel}</button>` : ''}
+						<button type="button" class="alphaville-overlay-cancel o-buttons">${submitLabel ? 'Cancel' : 'Close'}</button>
 					</div>
 				</form>
 			`,
-			modal: true,
+			modal: modal,
 			heading: {
 				title: title,
 				shaded: true
@@ -89,11 +90,13 @@ function FormOverlay (options) {
 		formOverlayDelegate.on('oOverlay.ready', () => {
 			const formEl = overlayInstance.wrapper.querySelector('form');
 
-			formEl.addEventListener('submit', onSubmit);
+			if (submitLabel) {
+				formEl.addEventListener('submit', onSubmit);
+			}
 		});
 
 		const onDestroy = function () {
-			if (overlayInstance.wrapper.querySelector('form')) {
+			if (overlayInstance.wrapper.querySelector('form') && submitLabel) {
 				overlayInstance.wrapper.querySelector('form').removeEventListener('submit', onSubmit);
 			}
 			overlayInstance.wrapper.removeEventListener('oOverlay.destroy', onDestroy);
