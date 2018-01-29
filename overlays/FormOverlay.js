@@ -29,12 +29,16 @@ function generateFormHtml (fields) {
 			html += '<div class="o-forms-group">';
 
 			if (field.label) {
-				html += `<label class="o-forms-label">${field.label}</label>`;
+				if (field.type === 'static-text') {
+					html += `<p>${field.label}</p>`;
+				} else {
+					html += `<label class="o-forms-label">${field.label}</label>`;
+				}
 			}
 
 			switch (field.type) {
 				case 'text':
-					html += `<input type="text" class="o-forms-text" name="${field.name}" value="${field.value || ''}" placeholder="${field.placeholder || ''}" />`;
+					html += `<input type="text" class="o-forms-text" name="${field.name}" value="${field.value || ''}" placeholder="${field.placeholder || ''}" ${field.attributes ? Object.keys(field.attributes).map(key => `${key}="${field.attributes[key]}"`).join(' ') : ''} />`;
 					break;
 			}
 
