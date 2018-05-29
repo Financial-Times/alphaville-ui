@@ -29,29 +29,29 @@ function serialize (form) {
 }
 
 function generateFormHtml (fields) {
-	let html = '<div class="o-forms">';
+	let html = '<div>';
 	if (fields && fields.length) {
 		fields.forEach(field => {
-			html += '<div class="o-forms-group">';
+			html += '<div class="o-forms">';
 
 			if (field.label && field.type !== 'checkbox') {
 				if (field.type === 'static-text') {
 					html += `<p>${field.label}</p>`;
 				} else {
-					html += `<label class="o-forms-label" for="alphaville-form-overlay-${field.name}">${field.label}</label>`;
+					html += `<label class="o-forms__label" for="alphaville-form-overlay-${field.name}">${field.label}</label>`;
 				}
 			}
 
 			switch (field.type) {
 				case 'text':
-					html += `<input type="text" class="o-forms-text" name="${field.name}" id="alphaville-form-overlay-${field.name}" value="${field.value || ''}" placeholder="${field.placeholder || ''}" ${field.attributes ? Object.keys(field.attributes).map(key => `${key}="${field.attributes[key]}"`).join(' ') : ''} />`;
+					html += `<input type="text" class="o-forms__text" name="${field.name}" id="alphaville-form-overlay-${field.name}" value="${field.value || ''}" placeholder="${field.placeholder || ''}" ${field.attributes ? Object.keys(field.attributes).map(key => `${key}="${field.attributes[key]}"`).join(' ') : ''} />`;
 					break;
 				case 'textarea':
-					html += `<textarea class="o-forms-textarea" name="${field.name}"  id="alphaville-form-overlay-${field.name}" ${field.attributes ? Object.keys(field.attributes).map(key => `${key}="${field.attributes[key]}"`).join(' ') : ''}>${field.value || ''}</textarea>`;
+					html += `<textarea class="o-forms__textarea" name="${field.name}"  id="alphaville-form-overlay-${field.name}" ${field.attributes ? Object.keys(field.attributes).map(key => `${key}="${field.attributes[key]}"`).join(' ') : ''}>${field.value || ''}</textarea>`;
 					break;
 				case 'checkbox':
-					html += `<input type="checkbox" class="o-forms-checkbox" id="alphaville-form-overlay-${field.name}" name="${field.name}" value="${field.value || true}" ${field.checked === true ? 'checked' : ''} />`;
-					html += `<label class="o-forms-label" for="alphaville-form-overlay-${field.name}">${field.label}</label>`;
+					html += `<input type="checkbox" class="o-forms__checkbox" id="alphaville-form-overlay-${field.name}" name="${field.name}" value="${field.value || true}" ${field.checked === true ? 'checked' : ''} />`;
+					html += `<label class="o-forms__label" for="alphaville-form-overlay-${field.name}">${field.label}</label>`;
 					break;
 			}
 
