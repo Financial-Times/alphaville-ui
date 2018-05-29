@@ -76,7 +76,7 @@ function FormOverlay (options) {
 				<form>
 					<div class="alphaville-overlay-form-content">${generateFormHtml(fields)}</div>
 					<div class="alphaville-overlay-buttons">
-						${submitLabel ? `<button type="submit" class="alphaville-overlay-submit o-buttons o-buttons--standout">${submitLabel}</button>` : ''}
+						${submitLabel ? `<button type="submit" class="alphaville-overlay-submit o-buttons o-buttons--primary">${submitLabel}</button>` : ''}
 						<button type="button" class="alphaville-overlay-cancel o-buttons">${submitLabel ? 'Cancel' : 'Close'}</button>
 					</div>
 				</form>

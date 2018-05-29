@@ -11,7 +11,7 @@
 		.alphaville-list-time-date {
 			font-size: 16px;
 			line-height: 22px;
-			color: oColorsGetPaletteColor('warm-6');
+			color: oColorsGetPaletteColor('black-80');
 			font-weight: 600;
 			text-transform: uppercase;
 		}
@@ -25,11 +25,11 @@
 
 	.alphaville-ad-stream {
 		padding: 20px 0;
-		border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
+		border-bottom: 1px solid oColorsGetPaletteColor('black-20');
 	}
 
 	.alphaville-card-container {
-		border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
+		border-bottom: 1px solid oColorsGetPaletteColor('black-20');
 		padding: 10px 0 20px;
 
 		a {

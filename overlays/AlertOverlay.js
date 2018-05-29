@@ -11,7 +11,7 @@ function AlertOverlay (title, text) {
 		html: `
 			<div class="alphaville-overlay-text">${text}</div>
 			<div class="alphaville-overlay-buttons">
-				<button type="button" class="alphaville-overlay-ok o-buttons o-buttons--standout">OK</button>
+				<button type="button" class="alphaville-overlay-ok o-buttons o-buttons--primary">OK</button>
 			</div>
 		`,
 		modal: false,

@@ -63,7 +63,7 @@ $ml-notification-background-color: transparent;
 	}
 
 	.marketslive-notification-close {
-		@include oIconsGetIcon(cross, oColorsGetPaletteColor("teal-2"), 15);
+		@include oIconsGetIcon(cross, oColorsGetPaletteColor("teal-80"), 15);
 		float: right;
 		margin-right: 10px;
 		cursor: pointer;
@@ -120,8 +120,8 @@ $ml-notification-background-color: transparent;
 		a {
 			display: inline-block;
 			padding: 3px 7px;
-			border: 1px solid oColorsGetPaletteColor("teal-2");
-			color: oColorsGetPaletteColor("teal-2");
+			border: 1px solid oColorsGetPaletteColor("teal-80");
+			color: oColorsGetPaletteColor("teal-80");
 			font-size: 13px;
 			text-decoration: none;
 

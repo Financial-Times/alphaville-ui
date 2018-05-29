@@ -29,7 +29,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card__heading--invert {
 	@include oCardHeading;
-	color: oColorsGetPaletteColor('cold-2');
+	color: oColorsGetPaletteColor('black-80');
 }
 
 .alphaville-card__heading-truncate--2lines {
@@ -80,7 +80,8 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 	$comment-counter-color: #22757c;
 	.alphaville-card--comment-counter {
-		@include oTypographySansSize(s);
+		@include oTypographySans($scale: -2);
+
 		font-size: 14px;
 		color: $comment-counter-color;
 		float: right;
@@ -97,7 +98,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 	&.alphaville-card--grid {
 		overflow: hidden;
-		background-color: oColorsGetPaletteColor('warm-5');
+		background-color: oColorsGetPaletteColor('white-60');
 
 		p {
 			margin: 0;
@@ -122,7 +123,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 	&.alphaville-card--list {
 		display: block;
-		
+
 		.alphaville-card__standfirst {
 			font-size: 18px;
 			font-family: Georgia;
@@ -166,7 +167,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 			color:#9e2f50;
 			font-weight: 600;
 			line-height: 12px;
-			font-size: 12px;		
+			font-size: 12px;
 		}
 	}
 }
@@ -194,7 +195,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 		&:last-child {
 			padding-right: 0;
-			
+
 			a:after {
 				content: '';
 			}
@@ -214,7 +215,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 			padding-right: 25px;
 
 			&:after {
-				@include oIconsGetIcon('series', oColorsGetPaletteColor('grey-tint3'), 40, $iconset-version: 1);
+				@include oIconsGetIcon('series', oColorsGetPaletteColor('black-50'), 40, $iconset-version: 1);
 				content: '';
 				position: absolute;
 				top: 0;
@@ -234,7 +235,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 			padding-right: 50px;
 
 			&:before {
-				@include oIconsGetIcon('podcast', oColorsGetPaletteColor('grey-tint3'), 40, $iconset-version: 1);
+				@include oIconsGetIcon('podcast', oColorsGetPaletteColor('black-50'), 40, $iconset-version: 1);
 				content: '';
 				position: absolute;
 				top: 0;
@@ -283,12 +284,12 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	.alphaville-card--marketslive-lozenge-icon {
 		@include marketslive-lozenge-icon(
 			$size: 18,
-			$bgColor: oColorsGetPaletteColor('pink'));
+			$bgColor: oColorsGetPaletteColor('paper'));
 		margin-bottom: -2px;
 	}
 
 	.alphaville-card__heading {
-		@include oTypographySansData('xl');
+		@include oTypographySans($scale: 4);
 		line-height: 26px;
 		font-size: 25px;
 		margin-bottom: 12px;
@@ -300,7 +301,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 
 	.alphaville-card__theme {
-		@include oTypographySansData('xl');
+		@include oTypographySans($scale: 4);
 		line-height: 26px;
 		font-size: 25px;
 		margin-bottom: 4px;
@@ -370,7 +371,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card--firstft.alphaville-card--grid {
 	.alphaville-card__tag {
-		@include oTypographySerif('l');
+		@include oTypographySerif($scale: 3);
 		color: $alphaville-card__color--yellow-tint3;
 		font-size: 28px;
 		line-height: 29px;
@@ -385,18 +386,18 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 	.alphaville-card__subheading {
 		@include oCardHeading;
-		@include oTypographySansBold('s');
+		@include oTypographySansBold($scale: -2);
 
 		&,
 		a {
-			color: oColorsGetPaletteColor('grey-tint1');
+			color: oColorsGetPaletteColor('black-30');
 		}
 	}
 }
 
 .alphaville-card--list {
 		.alphaville-card__tag-part1, .alphaville-card__tag-part2 {
-			@include oTypographySerif('l');
+			@include oTypographySerif($scale: 3);
 			color: $alphaville-card__color--yellow-tint3;
 			font-size: 26px;
 			line-height: 31px;
@@ -413,7 +414,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	position: relative;
 
 	.alphaville-card__heading {
-		@include oTypographySansBold('l');
+		@include oTypographySansBold($scale: 2);
 		font-size: 25px;
 		line-height: 26px;
 		margin-bottom: 10px;
@@ -430,7 +431,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		&,
 		a,
 		.alphaville-card__tag {
-			@include oTypographySansBold('xl');
+			@include oTypographySansBold($scale: 4);
 			font-size: 25px;
 			line-height: 26px;
 			text-transform: uppercase;
@@ -472,7 +473,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	position: relative;
 
 	.alphaville-card__heading {
-		@include oTypographySansBold('xl');
+		@include oTypographySansBold($scale: 4);
 		line-height: 26px;
 		font-size: 25px;
 		margin-bottom: 12px;
@@ -489,7 +490,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		&,
 		a,
 		.alphaville-card__tag {
-			@include oTypographySansData('xl');
+			@include oTypographySansData($scale: 4);
 			font-size: 25px;
 			line-height: 26px;
 			text-transform: uppercase;
@@ -559,7 +560,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	min-height: 170px;
 
 	.alphaville-card__heading {
-		@include oTypographySansBold('xl');
+		@include oTypographySansBold($scale: 4);
 		line-height: 26px;
 		font-size: 25px;
 		margin-bottom: 12px;
@@ -576,7 +577,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		&,
 		a,
 		.alphaville-card__tag {
-			@include oTypographySansData('xl');
+			@include oTypographySansData($scale: 4);
 			font-size: 25px;
 			line-height: 26px;
 			text-transform: uppercase;

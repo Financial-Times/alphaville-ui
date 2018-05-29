@@ -8,8 +8,8 @@
 .article__share {
 	position: relative;
 	margin-top: 15px;
-	border-top: 1px solid oColorsGetPaletteColor('warm-3');
-	border-bottom: 1px solid oColorsGetPaletteColor('warm-3');
+	border-top: 1px solid oColorsGetPaletteColor('black-20');
+	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
 
 	a {
 		@include oColorsFor(link, text);
@@ -17,7 +17,7 @@
 	}
 
 	&__count {
-		@include oTypographySansSize(s);
+		@include oTypographySans($scale: -2);
 		position: relative;
 		top: -5px;
 		display: none;
@@ -28,10 +28,10 @@
 	}
 
 	&__comments {
-		@include oTypographySansSize(s);
+		@include oTypographySans($scale: -2);
 
 		&:before {
-			@include oIconsGetIcon('comment', oColorsGetPaletteColor('cold-1'), 18);
+			@include oIconsGetIcon('comment', oColorsGetPaletteColor('black-70'), 18);
 			content: '';
 			position: relative;
 			margin-right: 5px;
@@ -47,7 +47,7 @@
 		}
 
 		&:before {
-			@include oIconsGetIcon('printer', oColorsGetPaletteColor('cold-1'), 18);
+			@include oIconsGetIcon('printer', oColorsGetPaletteColor('black-70'), 18);
 			content: '';
 			position: relative;
 			margin-right: 5px;
@@ -73,32 +73,6 @@
 		display: block;
 		float: left;
 	}
-
-	/*
-	.o-share__action a {
-		border-bottom-width: 0;
-	}
-
-	.o-share__action button {
-		display: block;
-		border: 0;
-		background-color: transparent;
-	}
-
-	.o-share__action a,
-	.o-share__action button {
-		padding: 0 6px;
-	}
-
-	.o-share__action--twitter a {
-		padding-left: 0;
-	}
-
-	.o-share__action--whatsapp {
-		@include oGridColspan((S: hide));
-		padding: 0;
-	}
-	*/
 
 	.n-myft-ui__button {
 		min-height: 24px;
