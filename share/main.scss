@@ -17,7 +17,7 @@
 	}
 
 	&__count {
-		@include oTypographySans($scale: -2);
+		@include oTypographySans(-2);
 		position: relative;
 		top: -5px;
 		display: none;
@@ -28,7 +28,7 @@
 	}
 
 	&__comments {
-		@include oTypographySans($scale: -2);
+		@include oTypographySans(-2);
 
 		&:before {
 			@include oIconsGetIcon('comment', oColorsGetPaletteColor('black-70'), 18);
