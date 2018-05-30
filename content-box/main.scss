@@ -9,7 +9,7 @@ $bg-color: oColorsGetPaletteColor('paper');
 }
 
 .alphaville-content-box__title {
-	@include oTypographyDisplay(2);
+	@include oTypographyDisplay($scale: 2);
 
 	left: 10px;
 	top: -10px;

@@ -186,7 +186,7 @@ $alphaville-header__toggle-article-view--color-active: oColorsGetPaletteColor('t
 }
 
 .alphaville-header__subbrand-title {
-	@include oTypographySans(4);
+	@include oTypographySans($scale: 4);
 	color: oColorsGetPaletteColor('white');
 	text-transform: uppercase;
 	font-weight: 500;
