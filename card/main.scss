@@ -1,5 +1,5 @@
-$o-card-is-silent: false;
-@import 'o-card/main';
+$o-teaser-is-silent: false;
+@import 'o-teaser/main';
 
 $alphaville-card__color--pink-tint1: #ebe0d1;
 $alphaville-card__color--grey-tint1: #c6c4c6;
@@ -24,11 +24,11 @@ $alphaville-card__color--yellow-tint3: #b35400;
 }
 
 .alphaville-card__heading {
-	@include oCardHeading;
+	@include oTeaserHeading;
 }
 
 .alphaville-card__heading--invert {
-	@include oCardHeading;
+	@include oTeaserHeading;
 	color: oColorsGetPaletteColor('black-80');
 }
 
@@ -41,11 +41,11 @@ $alphaville-card__color--yellow-tint3: #b35400;
 }
 
 .alphaville-card__tag {
-	@include oCardTag;
+	@include oTeaserTag;
 }
 
 .alphaville-card__standfirst {
-	@include oCardStandfirst;
+	@include oTeaserStandfirst;
 }
 
 .alphaville-card__standfirst-truncate--2lines {
@@ -69,14 +69,13 @@ $alphaville-card__color--yellow-tint3: #b35400;
 }
 
 .alphaville-card__timestamp {
-	@include oCardTimestamp;
+	@include oTeaserTimestamp;
 	display:inline-block;
-
 }
 
 
 .alphaville-card {
-	@include oCard;
+	@include oTeaserBase;
 
 	$comment-counter-color: #22757c;
 	.alphaville-card--comment-counter {
@@ -132,7 +131,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 
 		.alphaville-card__image {
-			@include oCardImage;
+			@include oTeaserImage;
 
 			width: 100%;
 
@@ -385,7 +384,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 
 	.alphaville-card__subheading {
-		@include oCardHeading;
+		@include oTeaserHeading;
 		@include oTypographySansBold($scale: -2);
 
 		&,
