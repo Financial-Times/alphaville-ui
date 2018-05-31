@@ -25,6 +25,8 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card__heading {
 	@include oTeaserHeading;
+	@include oTypographySize(4);
+	margin-bottom: 10px;
 }
 
 .alphaville-card__heading--invert {
@@ -42,6 +44,9 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card__tag {
 	@include oTeaserTag;
+	@include oTeaserMeta;
+	margin: 0 0 10px;
+	display: inline-block;
 }
 
 .alphaville-card__standfirst {
@@ -76,6 +81,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card {
 	@include oTeaserBase;
+	padding: 10px 10px 0;
 
 	$comment-counter-color: #22757c;
 	.alphaville-card--comment-counter {
@@ -87,10 +93,9 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		padding: 9px 0 0 5px;
 
 		&:after {
-			@include oIconsGetIcon('comment', $comment-counter-color, 14);
+			@include oIconsGetIcon('speech', $comment-counter-color, 24);
 			content: '';
 			position: relative;
-			margin-left: 5px;
 			vertical-align: middle;
 		}
 	}
@@ -134,6 +139,13 @@ $alphaville-card__color--yellow-tint3: #b35400;
 			@include oTeaserImage;
 
 			width: 100%;
+
+			img {
+			    display: block;
+			    max-width: 100%;
+			    height: auto;
+			    margin: 0;
+			}
 
 			@include oGridRespondTo(M) {
 				float: left;
@@ -336,9 +348,8 @@ $alphaville-card__color--yellow-tint3: #b35400;
 			color: $alphaville-card__color--yellow-tint1;
 
 			&:after {
-				@include oIconsGetIcon('comment', $alphaville-card__color--yellow-tint1, 14);
+				@include oIconsGetIcon('speech', $alphaville-card__color--yellow-tint1, 24);
 				position: relative;
-				margin-left: 5px;
 				vertical-align: middle;
 			}
 		}
@@ -544,9 +555,8 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		color: $alphaville-card__color--yellow-tint1;
 
 		&:after {
-			@include oIconsGetIcon('comment', $alphaville-card__color--yellow-tint1, 14);
+			@include oIconsGetIcon('speech', $alphaville-card__color--yellow-tint1, 24);
 			position: relative;
-			margin-left: 5px;
 			vertical-align: middle;
 		}
 	}
@@ -611,9 +621,8 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		color: $alphaville-card__color--yellow-tint1;
 
 		&:after {
-			@include oIconsGetIcon('comment', $alphaville-card__color--yellow-tint1, 14);
+			@include oIconsGetIcon('speech', $alphaville-card__color--yellow-tint1, 24);
 			position: relative;
-			margin-left: 5px;
 			vertical-align: middle;
 		}
 	}
