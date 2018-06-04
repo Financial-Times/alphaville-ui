@@ -29,13 +29,12 @@
 	}
 
 	&__comments {
-		@include oTypographySans($scale: -2);
+		@include oTypographySans($scale: 0);
 
 		&:before {
 			@include oIconsGetIcon('speech', oColorsGetPaletteColor('black-70'), 40);
 			content: '';
 			position: relative;
-			margin-right: 5px;
 			vertical-align: middle;
 		}
 	}
@@ -51,7 +50,6 @@
 			@include oIconsGetIcon('print', oColorsGetPaletteColor('black-70'), 40);
 			content: '';
 			position: relative;
-			margin-right: 5px;
 			vertical-align: middle;
 		}
 	}
