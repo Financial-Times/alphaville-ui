@@ -32,6 +32,15 @@
 		border-bottom: 1px solid oColorsGetPaletteColor('black-20');
 		padding: 10px 0 20px;
 
+		&:after {
+		    visibility: hidden;
+			display: block;
+			font-size: 0;
+			content: " ";
+			clear: both;
+			height: 0;
+		}
+
 		a {
 			border-bottom: 0;
 		}
