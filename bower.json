@@ -1,42 +1,43 @@
 {
-	"name": "alphaville-ui",
-	"private": true,
-	"homepage": "https://github.com/Financial-Times/alphaville-ui",
-	"authors": [
-		"Roland Vachter <roland.vachter@ft.com>"
-	],
-	"description": "",
-	"main": [
-		"main.js",
-		"main.scss"
-	],
-	"dependencies": {
-		"o-ads": "^9.0.0",
-		"o-grid": "^4.0.0",
-		"o-buttons": "^5.0.0",
-		"o-footer": "^6.0.0",
-		"o-header": "^7.0.0",
-		"o-colors": "^4.0.0",
-		"o-icons": "^5.0.0",
-		"o-date": "^2.5.0",
-		"o-typography": "^5.0.0",
-		"o-tracking": "^1.1.15",
-		"o-fonts": "^3.0.0",
-		"o-viewport": "^3.0.0",
-		"o-overlay": "^2.0.0",
-		"o-share": "^6.0.0",
-		"o-teaser": "^2.0.0",
-		"o-forms": "^5.0.0"
-	},
-	"license": "MIT",
-	"ignore": [
-		"**/.*",
-		"node_modules",
-		"bower_components",
-		"test",
-		"tests"
-	],
-	"resolutions": {
-		"o-viewport": "^3.0.0"
-	}
+  "name": "alphaville-ui",
+  "private": true,
+  "homepage": "https://github.com/Financial-Times/alphaville-ui",
+  "authors": [
+    "Roland Vachter <roland.vachter@ft.com>"
+  ],
+  "description": "",
+  "main": [
+    "main.js",
+    "main.scss"
+  ],
+  "dependencies": {
+    "o-ads": "^9.0.0",
+    "o-grid": "^4.0.0",
+    "o-buttons": "^5.0.0",
+    "o-footer": "^6.0.0",
+    "o-header": "^7.0.0",
+    "o-colors": "^4.0.0",
+    "o-icons": "^5.0.0",
+    "o-date": "^2.5.0",
+    "o-typography": "^5.0.0",
+    "o-tracking": "^1.1.15",
+    "o-fonts": "^3.0.0",
+    "o-viewport": "^3.0.0",
+    "o-overlay": "^2.0.0",
+    "o-share": "^6.0.0",
+    "o-teaser": "^2.0.0",
+    "o-forms": "^5.0.0",
+    "o-cookie-message": "^4.5.0"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "o-viewport": "^3.0.0"
+  }
 }
