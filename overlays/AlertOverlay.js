@@ -1,5 +1,5 @@
 const Overlay = require('o-overlay');
-const Delegate = require('dom-delegate');
+const Delegate = require('ftdomdelegate');
 
 function AlertOverlay (title, text) {
 	if (!text) {
