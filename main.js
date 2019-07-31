@@ -7,6 +7,7 @@ exports['o-tracking'] = require('o-tracking');
 exports['o-overlay'] = require('o-overlay');
 exports['o-share'] = require('o-share');
 exports['o-cookie-message'] = require('o-cookie-message');
+exports['o-permutive'] = require('o-permutive');
 
 exports['header'] = require('./header/main');
 exports['marketslive-session-listener'] = require('./marketslive-session-listener/main');
