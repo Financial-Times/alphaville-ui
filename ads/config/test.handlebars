@@ -1,6 +1,53 @@
 <script data-o-ads-config="" type="application/json">
 	{
 		"gpt": {
+				"network": 5887,
+				"site": "ft.com",
+				"zone": "alphaville/{{#if adZone}}{{adZone}}{{else}}unclassified{{/if}}"
+		},
+		"targetingApi": {
+			"user": "https://ads-api.ft.com/v1/user",
+			{{#articleId}}"page": "https://ads-api.ft.com/v1/content/{{.}}",{{/articleId}}
+			{{^articleId}}"page": null,{{/articleId}}
+			"usePageZone": false
+		},
+		"krux": {
+			"limit": 50,
+			{{#if adsTitle}}
+				"attributes": {
+					"page": {
+						"sections": ["{{adsTitle}}"]
+					}
+				},
+			{{else}}
+				{{#unless article}}
+					"attributes": {
+						"page": {
+							"sections": ["{{title}}"]
+						}
+					},
+				{{/unless}}
+			{{/if}}
+			"id": "KHUSeE3x"
+		},
+		"collapseEmpty": "before",
+		"responsive": {
+			"extra": [1220, 0],
+			"extrascroll": [1203, 0],
+			"large": [980, 0],
+			"largescroll": [963, 0],
+			"medium": [740, 0],
+			"mediumscroll": [723, 0],
+			"small": [490, 0],
+			"smallscroll": [473, 0],
+			"default": [0, 0]
+		}
+	}
+</script>
+
+<script data-o-ads-config="" type="application/json">
+	{
+		"gpt": {
 			"network": 5887,
 			"site": "test.5887.alphaville",
 			"zone": "unclassified"
@@ -36,3 +83,44 @@
 		}
 	}
 </script>
+
+<!--
+<script data-o-ads-config="" type="application/json">
+	{
+		"gpt": {
+			"network": 5887,
+			"site": "test.5887.alphaville",
+			"zone": "unclassified"
+		},
+		"targetingApi": {
+			"user": "https://ads-api.ft.com/v1/user",
+			{{#articleId}}"page": "https://ads-api.ft.com/v1/content/{{.}}",{{/articleId}}
+			{{^articleId}}"page": null,{{/articleId}}
+			"usePageZone": true
+		},
+		"krux": {
+			"limit": 50,
+			{{#unless article}}
+				"attributes": {
+					"page": {
+						"sections": ["{{title}}"]
+					}
+				},
+			{{/unless}}
+			"id": "IgnVxTJW"
+		},
+		"collapseEmpty": "before",
+		"responsive": {
+			"extra": [1220, 0],
+			"extrascroll": [1203, 0],
+			"large": [980, 0],
+			"largescroll": [963, 0],
+			"medium": [740, 0],
+			"mediumscroll": [723, 0],
+			"small": [490, 0],
+			"smallscroll": [473, 0],
+			"default": [0, 0]
+		}
+	}
+</script>
+-->
