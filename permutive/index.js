@@ -1,5 +1,5 @@
-const oPermutive = require('o-permutive');
-const oAds = require('o-ads');
+import oPermutive from 'o-permutive';
+import oAds from 'o-ads';
 
 /*
  * Permutive's project ID and API Key

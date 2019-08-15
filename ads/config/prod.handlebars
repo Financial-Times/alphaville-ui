@@ -11,25 +11,6 @@
 			{{^articleId}}"page": null,{{/articleId}}
 			"usePageZone": false
 		},
-		"krux": {
-			"limit": 50,
-			{{#if adsTitle}}
-				"attributes": {
-					"page": {
-						"sections": ["{{adsTitle}}"]
-					}
-				},
-			{{else}}
-				{{#unless article}}
-					"attributes": {
-						"page": {
-							"sections": ["{{title}}"]
-						}
-					},
-				{{/unless}}
-			{{/if}}
-			"id": "KHUSeE3x"
-		},
 		"collapseEmpty": "before",
 		"responsive": {
 			"extra": [1220, 0],

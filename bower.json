@@ -11,7 +11,7 @@
     "main.scss"
   ],
   "dependencies": {
-    "o-ads": "^10.0.4",
+    "o-ads": "^13.0.0",
     "o-grid": "^4.0.0",
     "o-buttons": "^5.0.0",
     "o-footer": "^6.0.0",
