@@ -79,7 +79,7 @@ const setPageMetaData = (content, user) => {
 		pageMetaData.article = {
 			id: content.uuid,
 			// title,
-			// type,
+			type: content.genre && content.genre instanceof Array && content.genre[0],
 			organisations: content.organisation,
 			people: content.person,
 			categories: content.categories,
