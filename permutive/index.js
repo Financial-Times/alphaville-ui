@@ -94,10 +94,14 @@ const setPageMetaData = (content, user) => {
 			industry: user.industry && user.industry.code,
 			responsibility: user.responsibility && user.responsibility.code,
 			position: user.position && user.position.code,
+			subscriptionLevel: user.subscriptionLevel,
+			loggedIn: user.loggedInStatus,
+			indb2b: user.hui.indb2b,
+			gender: user.hui.gender,
 		};
 	}
 
-	oPermutive.setPageMetaData(pageMetaData);
+	oPermutive.setPageMetaData({ page: pageMetaData });
 };
 
 const setUser = () =>
