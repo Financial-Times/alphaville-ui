@@ -55,10 +55,16 @@ const getContent = (contentId) => {
  */
 const identifyUser = (user) => {
 	if (user) {
-		oPermutive.identifyUser({
-			guid: user.uuid,
-			spoorID: user.spoorId,
-		});
+		oPermutive.identifyUser([
+			{
+				id: user.spoorId,
+				tag: 'SporeID',
+			},
+			{
+				id: user.uuid,
+				tag: 'GUID',
+			}
+		]);
 		return user;
 	}
 };
