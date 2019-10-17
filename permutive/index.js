@@ -45,11 +45,12 @@ const getUser = () => {
  */
 const getContent = (contentId) => {
 	if (contentId) {
-		return oAds.api.getPageData(adsApiEndpoints.content(contentId), 250)
-			.catch((error) => {
-				console.warn('oPermutive: Could not set page metadata', error);
-			});
+		return Promise.resolve();
 	}
+	return oAds.api.getPageData(adsApiEndpoints.content(contentId), 250)
+		.catch((error) => {
+			console.warn('oPermutive: Could not set page metadata', error);
+		});
 };
 
 /*
