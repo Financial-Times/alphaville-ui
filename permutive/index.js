@@ -44,6 +44,9 @@ const getUser = () => {
  * Retrieve content from Ads v2
  */
 const getContent = (contentId) => {
+	// Skip call to Ads API if no `contentId` provided. e.g., homepage
+	if (!contentId) { return Promise.resolve(); }
+
 	return oAds.api.getPageData(adsApiEndpoints.content(contentId), 250)
 		.catch((error) => {
 			console.warn('oPermutive: Could not set page metadata', error);
@@ -55,10 +58,16 @@ const getContent = (contentId) => {
  */
 const identifyUser = (user) => {
 	if (user) {
-		oPermutive.identifyUser({
-			guid: user.uuid,
-			spoorID: user.spoorId,
-		});
+		oPermutive.identifyUser([
+			{
+				id: user.spoorId,
+				tag: 'SporeID',
+			},
+			{
+				id: user.uuid,
+				tag: 'GUID',
+			}
+		]);
 		return user;
 	}
 };
@@ -73,7 +82,7 @@ const setPageMetaData = (content, user) => {
 		pageMetaData.article = {
 			id: content.uuid,
 			// title,
-			// type,
+			type: content.genre && content.genre instanceof Array && content.genre[0],
 			organisations: content.organisation,
 			people: content.person,
 			categories: content.categories,
@@ -88,10 +97,14 @@ const setPageMetaData = (content, user) => {
 			industry: user.industry && user.industry.code,
 			responsibility: user.responsibility && user.responsibility.code,
 			position: user.position && user.position.code,
+			subscriptionLevel: user.subscriptionLevel,
+			loggedIn: (!!user.loggedInStatus).toString(),
+			indb2b: user.hui && user.hui.indb2b,
+			gender: user.hui && user.hui.gender,
 		};
 	}
 
-	oPermutive.setPageMetaData(pageMetaData);
+	oPermutive.setPageMetaData({ page: pageMetaData });
 };
 
 const setUser = () =>
