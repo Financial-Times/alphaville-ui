@@ -99,8 +99,8 @@ const setPageMetaData = (content, user) => {
 			position: user.position && user.position.code,
 			subscriptionLevel: user.subscriptionLevel,
 			loggedIn: (!!user.loggedInStatus).toString(),
-			indb2b: user.hui.indb2b,
-			gender: user.hui.gender,
+			indb2b: user.hui && user.hui.indb2b,
+			gender: user.hui && user.hui.gender,
 		};
 	}
 
