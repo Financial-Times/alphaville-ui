@@ -44,9 +44,9 @@ const getUser = () => {
  * Retrieve content from Ads v2
  */
 const getContent = (contentId) => {
-	if (contentId) {
-		return Promise.resolve();
-	}
+	// Skip call to Ads API if no `contentId` provided. e.g., homepage
+	if (!contentId) { return Promise.resolve(); }
+
 	return oAds.api.getPageData(adsApiEndpoints.content(contentId), 250)
 		.catch((error) => {
 			console.warn('oPermutive: Could not set page metadata', error);
