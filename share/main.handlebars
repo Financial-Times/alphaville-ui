@@ -20,24 +20,26 @@
 
 		{{#article.comments.enabled}}
 			{{^hideCommentCount}}
-				{{#if useCoralTalk}}
-					<a href="#comments"
-						class="o-comments article__share__comments article__share-item"
-						data-o-component="o-comments"
-						data-o-comments-article-id="{{article.id}}"
-						data-o-comments-count="true"
-						data-trackable="comment-count">
-					</a>
-				{{else}}
-					<a href="#comments"
-						class="article__share__comments article__share-item"
-						data-o-component="o-comments"
-						data-o-comments-count
-						data-o-comments-config-article-id="{{article.id}}"
-						data-o-comments-config-template="{count}"
-						data-trackable="comment-count">
-					</a>
-				{{/if}}
+				{{#unless longroomCommentCountDisabled}}
+					{{#if useCoralTalk}}
+						<a href="#comments"
+							class="o-comments article__share__comments article__share-item"
+							data-o-component="o-comments"
+							data-o-comments-article-id="{{article.id}}"
+							data-o-comments-count="true"
+							data-trackable="comment-count">
+						</a>
+					{{else}}
+						<a href="#comments"
+							class="article__share__comments article__share-item"
+							data-o-component="o-comments"
+							data-o-comments-count
+							data-o-comments-config-article-id="{{article.id}}"
+							data-o-comments-config-template="{count}"
+							data-trackable="comment-count">
+						</a>
+					{{/if}}
+				{{/unless}}
 			{{/hideCommentCount}}
 		{{/article.comments.enabled}}
 	</div>
