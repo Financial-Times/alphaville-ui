@@ -25,8 +25,8 @@
     "o-viewport": "^3.0.0",
     "o-overlay": "^2.0.0",
     "o-share": "^6.0.0",
-    "o-teaser": "^2.0.0",
-    "o-forms": "^5.0.0",
+    "o-teaser": "^3.0.0",
+    "o-forms": "^6.0.0",
     "o-cookie-message": "^4.5.2",
     "o-permutive": "^1.0.5"
   },
