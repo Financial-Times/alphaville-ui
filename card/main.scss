@@ -25,13 +25,13 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card__heading {
 	@include oTeaserHeading;
-	@include oTypographySize(4);
+	@include oTypographySans($scale: 4, $include-font-family: false); // Might be oTypographySerif, might be oTypographyDisplay… (not sure how to determine which).
 	margin-bottom: 10px;
 }
 
 .alphaville-card__heading--invert {
 	@include oTeaserHeading;
-	color: oColorsGetPaletteColor('black-80');
+	color: oColorsByName('black-80');
 }
 
 .alphaville-card__heading-truncate--2lines {
@@ -102,7 +102,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 	&.alphaville-card--grid {
 		overflow: hidden;
-		background-color: oColorsGetPaletteColor('white-60');
+		background-color: oColorsByName('white-60');
 
 		p {
 			margin: 0;
@@ -226,7 +226,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 			padding-right: 25px;
 
 			&:after {
-				@include oIconsGetIcon('series', oColorsGetPaletteColor('black-50'), 40, $iconset-version: 1);
+				@include oIconsGetIcon('series', oColorsByName('black-50'), 40, $iconset-version: 1);
 				content: '';
 				position: absolute;
 				top: 0;
@@ -246,7 +246,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 			padding-right: 50px;
 
 			&:before {
-				@include oIconsGetIcon('podcast', oColorsGetPaletteColor('black-50'), 40, $iconset-version: 1);
+				@include oIconsGetIcon('podcast', oColorsByName('black-50'), 40, $iconset-version: 1);
 				content: '';
 				position: absolute;
 				top: 0;
@@ -295,7 +295,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	.alphaville-card--marketslive-lozenge-icon {
 		@include marketslive-lozenge-icon(
 			$size: 18,
-			$bgColor: oColorsGetPaletteColor('paper'));
+			$bgColor: oColorsByName('paper'));
 		margin-bottom: -2px;
 	}
 
@@ -357,7 +357,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 	&.alphaville-card--marketslive-live {
 		.alphaville-card__theme-part2 {
-			color: oColorsGetPaletteColor('white');
+			color: oColorsByName('white');
 			font-weight: 600;
 		}
 	}
@@ -396,11 +396,11 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 	.alphaville-card__subheading {
 		@include oTeaserHeading;
-		@include oTypographySansBold($scale: -2);
+		@include oTypographySans($scale: -2, $weight: 'semibold');
 
 		&,
 		a {
-			color: oColorsGetPaletteColor('black-30');
+			color: oColorsByName('black-30');
 		}
 	}
 }
@@ -424,7 +424,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	position: relative;
 
 	.alphaville-card__heading {
-		@include oTypographySansBold($scale: 2);
+		@include oTypographySans($scale: 2, $weight: 'semibold');
 		font-size: 25px;
 		line-height: 26px;
 		margin-bottom: 10px;
@@ -441,7 +441,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		&,
 		a,
 		.alphaville-card__tag {
-			@include oTypographySansBold($scale: 4);
+			@include oTypographySans($scale: 4, $weight: 'semibold');
 			font-size: 25px;
 			line-height: 26px;
 			text-transform: uppercase;
@@ -483,7 +483,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	position: relative;
 
 	.alphaville-card__heading {
-		@include oTypographySansBold($scale: 4);
+		@include oTypographySans($scale: 4, $weight: 'semibold');
 		line-height: 26px;
 		font-size: 25px;
 		margin-bottom: 12px;
@@ -569,7 +569,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	min-height: 170px;
 
 	.alphaville-card__heading {
-		@include oTypographySansBold($scale: 4);
+		@include oTypographySans($scale: 4, $weight: 'semibold');
 		line-height: 26px;
 		font-size: 25px;
 		margin-bottom: 12px;

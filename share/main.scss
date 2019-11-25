@@ -9,8 +9,8 @@
 	position: relative;
 	margin-top: 15px;
 	padding: 5px 0;
-	border-top: 1px solid oColorsGetPaletteColor('black-20');
-	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
+	border-top: 1px solid oColorsByName('black-20');
+	border-bottom: 1px solid oColorsByName('black-20');
 
 	a {
 		@include oColorsFor(link, text);
@@ -32,7 +32,7 @@
 		@include oTypographySans($scale: 0);
 
 		&:before {
-			@include oIconsGetIcon('speech', oColorsGetPaletteColor('black-70'), 40);
+			@include oIconsGetIcon('speech', oColorsByName('black-70'), 40);
 			content: '';
 			position: relative;
 			vertical-align: middle;
@@ -47,7 +47,7 @@
 		}
 
 		&:before {
-			@include oIconsGetIcon('print', oColorsGetPaletteColor('black-70'), 40);
+			@include oIconsGetIcon('print', oColorsByName('black-70'), 40);
 			content: '';
 			position: relative;
 			vertical-align: middle;

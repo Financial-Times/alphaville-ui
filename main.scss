@@ -23,32 +23,24 @@ $o-ads-is-silent: false;
 $o-fonts-is-silent: false;
 @import 'o-fonts/main';
 
-$o-typography-is-silent: false;
 @import 'o-typography/main';
 
 $o-grid-mode: snappy;
-$o-grid-is-silent: false;
 @import 'o-grid/main';
 
-$o-buttons-is-silent: false;
 @import 'o-buttons/main';
 
-$o-header-is-silent: false;
 @import 'o-header/main';
 
-$o-footer-is-silent: false;
 @import 'o-footer/main';
 
 $o-icons-is-silent: false;
 @import 'o-icons/main';
 
-$o-overlay-is-silent: false;
 @import 'o-overlay/main';
 
-$o-forms-is-silent: false;
 @import 'o-forms/main';
 
-$o-teaser-is-silent: false;
 @import 'o-teaser/main';
 
 @import 'o-colors/main';
@@ -73,3 +65,40 @@ $o-teaser-is-silent: false;
 @import './card/main';
 @import './article-list/main';
 @import './cookie-banner/main';
+
+@include oButtons($opts: (
+	'types': ('primary'),
+	'themes': ('standard')
+));
+
+@include oFooter($opts: (
+	'themes': ('dark'),
+	'matrix': true,
+));
+
+@include oForms($opts: (
+	'elements': (
+		'text',
+		'checkbox'
+	),
+	'features': (
+		'small'
+	)
+));
+
+@include oGrid($opts: (
+	'bleed': true,
+	'shuffle-selectors': true,
+	'friendly-selectors': true,
+	'surface': ('current-layout', 'layout-sizes'),
+	'rows': ('compact')
+));
+
+@include oHeader($opts: ('drawer', 'sticky'));
+
+@include oOverlay();
+
+@include oTeaser($opts:(
+	'elements': ('default', 'images'),
+	'themes': ('small', 'large', 'video')
+));
