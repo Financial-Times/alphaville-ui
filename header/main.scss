@@ -27,7 +27,7 @@
 	display: none;
 
 	.o-header__drawer-menu-link--selected & {
-		@include marketslive-lozenge-icon($color: oColorsGetPaletteColor('white'));
+		@include marketslive-lozenge-icon($color: oColorsByName('white'));
 		display: none;
 
 		.ml-is-live & {
@@ -49,7 +49,7 @@
 		@include marketslive-live-title();
 
 		&.o-header__drawer-menu-link--selected {
-			@include marketslive-live-title($color: oColorsGetPaletteColor('white'));
+			@include marketslive-live-title($color: oColorsByName('white'));
 		}
 	}
 }
@@ -79,7 +79,7 @@
 	width: 1px;
 	height: 23px;
 	margin: 0 5px;
-	background: oColorsGetPaletteColor('black-20');
+	background: oColorsByName('black-20');
 }
 
 .alphaville-header__toggle-article-view-item {
@@ -106,36 +106,42 @@
 	}
 }
 
-$alphaville-header__toggle-article-view--color-normal: oColorsGetPaletteColor('black-20');
-$alphaville-header__toggle-article-view--color-active: oColorsGetPaletteColor('teal-40');
+$alphaville-header__toggle-article-view--color-normal: oColorsByName('black-20');
+$alphaville-header__toggle-article-view--color-active: oColorsByName('teal-40');
 
-.alphaville-header__toggle-article-view--grid {
-	@include oIconsGetIcon('grid', $alphaville-header__toggle-article-view--color-normal, 25, $iconset-version: 1);
+@mixin _header-icon ($name) {
+	@include oIconsContent(
+		$icon-name: $name,
+		$color: $alphaville-header__toggle-article-view--color-normal,
+		$size: 25
+	);
 
 	&:after {
-		@include oIconsGetIcon('grid', $alphaville-header__toggle-article-view--color-active, 25, $iconset-version: 1);
+		@include oIconsContent(
+			$icon-name: $name,
+			$color: $alphaville-header__toggle-article-view--color-active,
+			$size: 25
+		);
 		visibility: hidden;
 		left: -9999px;
 	}
 
 	&:hover,
 	&[data-selected] {
-		@include oIconsGetIcon('grid', $alphaville-header__toggle-article-view--color-active, 25, $iconset-version: 1);
+		@include oIconsContent(
+			$icon-name: $name,
+			$color: $alphaville-header__toggle-article-view--color-active,
+			$size: 25
+		);
 	}
 }
+
+.alphaville-header__toggle-article-view--grid {
+	@include _header-icon(grid);
+}
+
 .alphaville-header__toggle-article-view--list {
-	@include oIconsGetIcon('list', $alphaville-header__toggle-article-view--color-normal, 25, $iconset-version: 1);
-
-	&:after {
-		@include oIconsGetIcon('list', $alphaville-header__toggle-article-view--color-active, 25, $iconset-version: 1);
-		visibility: hidden;
-		left: -9999px;
-	}
-
-	&:hover,
-	&[data-selected] {
-		@include oIconsGetIcon('list', $alphaville-header__toggle-article-view--color-active, 25, $iconset-version: 1);
-	}
+	@include _header-icon(list);
 }
 
 .alphaville-header__container {
@@ -188,7 +194,7 @@ $alphaville-header__toggle-article-view--color-active: oColorsGetPaletteColor('t
 
 .alphaville-header__subbrand-title {
 	@include oTypographySans($scale: 4);
-	color: oColorsGetPaletteColor('white');
+	color: oColorsByName('white');
 	text-transform: uppercase;
 	font-weight: 500;
 	display: inline-block;
