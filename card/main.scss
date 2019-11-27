@@ -47,7 +47,14 @@ $alphaville-card__color--yellow-tint3: #b35400;
 }
 
 .alphaville-card__standfirst {
-	@include oEditorialTypographyStandfirst();
+	@include oTypographySans($scale: 0, $include-font-family: false);
+	color: oColorsByName('black-60');
+	margin-top: 0;
+	margin-bottom: 0;
+
+	a {
+		@include oTypographyLink();
+	}
 }
 
 .alphaville-card__standfirst-truncate--2lines {
