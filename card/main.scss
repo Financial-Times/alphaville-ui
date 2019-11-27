@@ -41,7 +41,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 }
 
 .alphaville-card__tag {
-	@include oEditorialTypographyTag(null);
+	@include oEditorialTypographyTag('topic');
 	margin: 0 0 10px;
 	display: inline-block;
 }
