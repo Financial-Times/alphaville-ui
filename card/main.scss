@@ -23,7 +23,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card__heading {
 	@include oTeaserHeading();
-	@include oTypographyDisplay($scale: 4);
+	@include oTypographyDisplay($scale: 4, $include-font-family: false);
 	margin-bottom: 10px;
 }
 
