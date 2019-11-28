@@ -92,6 +92,12 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	padding: 10px 10px 0;
 	box-sizing: border-box;
 
+	& *,
+	& *:before,
+	& *:after {
+		box-sizing: inherit;
+	}
+
 	$comment-counter-color: #22757c;
 	.alphaville-card--comment-counter {
 		@include oTypographySans($scale: -2);
