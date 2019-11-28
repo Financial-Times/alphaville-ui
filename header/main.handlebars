@@ -65,11 +65,11 @@
 	</div>
 
 	<nav id="o-header-nav-mobile" class="o-header__row o-header__nav o-header__nav--mobile" role="navigation" data-trackable="header-nav:mobile">
-		<div class="o-header__container">			
+		<div class="o-header__container">
 			<ul class="o-header__nav-list o-header__nav-list--left" data-trackable="primary-nav">
 				{{#mobileNavItems}}
 				<li class="o-header__nav-item {{liClass}}">
-					<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-selected="true"{{/selected}} {{{attributes}}} data-trackable="mega-menu-link">
+					<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-current="page"{{/selected}} {{{attributes}}} data-trackable="mega-menu-link">
 						{{{name}}}
 						{{#lozenge}}<span class="alphaville-header-ml-lozenge-icon"></span>{{/lozenge}}
 					</a>
@@ -103,7 +103,7 @@
 			<ul class="o-header__nav-list o-header__nav-list--left" data-trackable="primary-nav">
 				{{#navItems}}
 				<li class="o-header__nav-item {{liClass}}">
-					<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-selected="true"{{/selected}} id="o-header-link-" data-trackable="link">
+					<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-current="page"{{/selected}} id="o-header-link-" data-trackable="link">
 						{{{name}}}
 						{{#lozenge}}<span class="alphaville-header-ml-lozenge-icon"></span>{{/lozenge}}
 					</a>
@@ -165,7 +165,7 @@
 								<ul class="o-header__nav-list" data-trackable="primary-nav">
 									{{#navItems}}
 									<li class="o-header__nav-item {{liClass}}">
-										<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-selected="true"{{/selected}} id="o-header-link-" data-trackable="link">
+										<a class="o-header__nav-link o-header__nav-link--primary {{#lozenge}}alphaville-header-ml-title{{/lozenge}}" href="{{url}}" {{#selected}}aria-current="page"{{/selected}} id="o-header-link-" data-trackable="link">
 											{{{name}}}
 											{{#lozenge}}<span class="alphaville-header-ml-lozenge-icon"></span>{{/lozenge}}
 										</a>
