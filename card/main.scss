@@ -42,6 +42,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card__tag {
 	@include oEditorialTypographyTag('topic');
+	@include oTypographySans(0);
 	margin: 0 0 10px;
 	display: inline-block;
 }
@@ -79,6 +80,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 .alphaville-card__timestamp {
 	@include oEditorialTypographyTimestamp();
+	@include oTypographySans(-2);
 	display: inline-block;
 }
 
