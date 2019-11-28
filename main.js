@@ -1,12 +1,12 @@
-exports['o-date'] = require('o-date').default;
-exports['o-ads'] = require('o-ads').default;
-exports['o-grid'] = require('o-grid').default;
-exports['o-header'] = require('o-header').default;
-exports['o-footer'] = require('o-footer').default;
+exports['o-date'] = require('o-date');
+exports['o-ads'] = require('o-ads');
+exports['o-grid'] = require('o-grid');
+exports['o-header'] = require('o-header');
+exports['o-footer'] = require('o-footer');
 exports['o-tracking'] = require('o-tracking').default;
-exports['o-overlay'] = require('o-overlay').default;
-exports['o-share'] = require('o-share').default;
-exports['o-cookie-message'] = require('o-cookie-message').default;
+exports['o-overlay'] = require('o-overlay');
+exports['o-share'] = require('o-share');
+exports['o-cookie-message'] = require('o-cookie-message');
 
 exports['header'] = require('./header/main');
 exports['marketslive-session-listener'] = require('./marketslive-session-listener/main');

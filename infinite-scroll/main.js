@@ -1,4 +1,4 @@
-const oViewport = require('o-viewport').default;
+const oViewport = require('o-viewport');
 const httpRequest = require('../utils/httpRequest');
 const domUtils = require('../utils/dom');
 
