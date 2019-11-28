@@ -1,5 +1,5 @@
-const Overlay = require('o-overlay');
-const Delegate = require('ftdomdelegate');
+import Overlay from 'o-overlay';
+import Delegate from 'ftdomdelegate';
 
 function ConfirmOverlay (title, text) {
 	if (!text) {
