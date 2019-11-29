@@ -1,4 +1,4 @@
-const oTracking = require('o-tracking').default;
+import oTracking from 'o-tracking';
 
 function otrackinginit() {
 	const config_data = {
