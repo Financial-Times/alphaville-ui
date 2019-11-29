@@ -7,7 +7,7 @@
 	}
 }
 
-@mixin alphaville-spinner ($color: oColorsGetPaletteColor('black-40'), $bgColor: oColorsGetPaletteColor('paper'), $size: 40px, $speed: 0.7s) {
+@mixin alphaville-spinner ($color: oColorsByName('black-40'), $bgColor: oColorsByName('paper'), $size: 40px, $speed: 0.7s) {
 	font-size: 10px;
 	text-indent: -9999em;
 	width: $size;
@@ -35,5 +35,5 @@
 }
 
 .alphaville-spinner {
-	@include alphaville-spinner($size: 30px, $color: oColorsGetPaletteColor('black-10'));
+	@include alphaville-spinner($size: 30px, $color: oColorsByName('black-10'));
 }

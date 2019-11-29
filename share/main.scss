@@ -1,19 +1,14 @@
-@include oShareBase(o-share);
-@include oShareActionIcon(facebook, o-share);
-@include oShareActionIcon(twitter, o-share);
-@include oShareActionIcon(whatsapp, o-share);
-@include oShareActionIcon(linkedin, o-share);
-@include oShareActionIcon(mail, o-share);
+@include oShare($opts: ('vertical': false));
 
 .article__share {
 	position: relative;
 	margin-top: 15px;
 	padding: 5px 0;
-	border-top: 1px solid oColorsGetPaletteColor('black-20');
-	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
+	border-top: 1px solid oColorsByName('black-20');
+	border-bottom: 1px solid oColorsByName('black-20');
 
 	a {
-		@include oColorsFor(link, text);
+		color: oColorsByUsecase('link', 'text');
 		text-decoration: none;
 	}
 
@@ -32,7 +27,11 @@
 		@include oTypographySans($scale: 0);
 
 		&:before {
-			@include oIconsGetIcon('speech', oColorsGetPaletteColor('black-70'), 40);
+			@include oIconsContent(
+				$icon-name: speech,
+				$color: oColorsByName('black-70'),
+				$size: 40
+			);
 			content: '';
 			position: relative;
 			vertical-align: middle;
@@ -47,7 +46,11 @@
 		}
 
 		&:before {
-			@include oIconsGetIcon('print', oColorsGetPaletteColor('black-70'), 40);
+			@include oIconsContent(
+				$icon-name: print,
+				$color: oColorsByName('black-70'),
+				$size: 40
+			);
 			content: '';
 			position: relative;
 			vertical-align: middle;

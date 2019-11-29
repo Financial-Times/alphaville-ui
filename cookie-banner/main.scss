@@ -1,2 +1,2 @@
-$o-cookie-message-is-silent: false;
 @import 'o-cookie-message/main';
+@include oCookieMessage();

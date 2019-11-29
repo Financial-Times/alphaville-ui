@@ -1,4 +1,5 @@
-const oTracking = require('o-tracking');
+import oTracking from 'o-tracking';
+
 function otrackinginit() {
 	const config_data = {
 		server: 'https://spoor-api.ft.com/px.gif',

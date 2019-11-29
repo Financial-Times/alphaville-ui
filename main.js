@@ -1,12 +1,22 @@
-exports['o-date'] = require('o-date');
-exports['o-ads'] = require('o-ads');
-exports['o-grid'] = require('o-grid');
-exports['o-header'] = require('o-header');
-exports['o-footer'] = require('o-footer');
-exports['o-tracking'] = require('o-tracking');
-exports['o-overlay'] = require('o-overlay');
-exports['o-share'] = require('o-share');
-exports['o-cookie-message'] = require('o-cookie-message');
+import oDate from 'o-date';
+import oAds from 'o-ads';
+import oGrid from 'o-grid';
+import oHeader from 'o-header';
+import oFooter from 'o-footer';
+import oTracking from 'o-tracking';
+import oOverlay from 'o-overlay';
+import oShare from 'o-share';
+import oCookieMessage from 'o-cookie-message';
+
+exports['o-date'] = oDate;
+exports['o-ads'] = oAds;
+exports['o-grid'] = oGrid;
+exports['o-header'] = oHeader;
+exports['o-footer'] = oFooter;
+exports['o-tracking'] = oTracking;
+exports['o-overlay'] = oOverlay;
+exports['o-share'] = oShare;
+exports['o-cookie-message'] = oCookieMessage;
 
 exports['header'] = require('./header/main');
 exports['marketslive-session-listener'] = require('./marketslive-session-listener/main');

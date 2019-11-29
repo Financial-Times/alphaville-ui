@@ -1,9 +1,9 @@
 html {
 	// The iconic pink background
-	@include oColorsFor(page, background);
+	background: oColorsByUsecase('page', 'background');
 
 	// Set a font family on the whole document
-	font-family: $o-typography-sans;
+	@include oTypographySans();
 	font-size: initial;
 
 	// Prevent navigation menus from creating
@@ -13,7 +13,7 @@ html {
 
 body {
 	margin: 0;
-	color: oColorsGetPaletteColor('black-80');
+	color: oColorsByName('black-80');
 	-webkit-text-size-adjust: 100%;
 }
 
@@ -23,7 +23,7 @@ body {
 }
 
 a {
-	color: oColorsGetPaletteColor('oxford');
+	color: oColorsByName('oxford');
 	-webkit-font-smoothing: antialiased;
 	text-decoration: none;
 

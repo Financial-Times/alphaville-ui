@@ -1,5 +1,4 @@
-$o-teaser-is-silent: false;
-@import 'o-teaser/main';
+@include oTeaser();
 
 $alphaville-card__color--pink-tint1: #ebe0d1;
 $alphaville-card__color--grey-tint1: #c6c4c6;
@@ -8,7 +7,6 @@ $alphaville-card__color--grey-tint3: #443c47;
 $alphaville-card__color--yellow-tint1: #fffce9;
 $alphaville-card__color--yellow-tint2: #f4a208;
 $alphaville-card__color--yellow-tint3: #b35400;
-
 
 @mixin truncate ($lineHeight, $lines, $ellipsis: true) {
 	max-height: $lineHeight * $lines;
@@ -24,14 +22,14 @@ $alphaville-card__color--yellow-tint3: #b35400;
 }
 
 .alphaville-card__heading {
-	@include oTeaserHeading;
-	@include oTypographySize(4);
+	@include oTeaserHeading();
+	@include oTypographyDisplay($scale: 4, $include-font-family: false);
 	margin-bottom: 10px;
 }
 
 .alphaville-card__heading--invert {
-	@include oTeaserHeading;
-	color: oColorsGetPaletteColor('black-80');
+	@include oTeaserHeading();
+	color: oColorsByName('black-80');
 }
 
 .alphaville-card__heading-truncate--2lines {
@@ -43,14 +41,21 @@ $alphaville-card__color--yellow-tint3: #b35400;
 }
 
 .alphaville-card__tag {
-	@include oTeaserTag;
-	@include oTeaserMeta;
+	@include oEditorialTypographyTag('topic');
+	@include oTypographySans(0);
 	margin: 0 0 10px;
 	display: inline-block;
 }
 
 .alphaville-card__standfirst {
-	@include oTeaserStandfirst;
+	@include oTypographySans($scale: 0, $include-font-family: false);
+	color: oColorsByName('black-60');
+	margin-top: 0;
+	margin-bottom: 0;
+
+	a {
+		@include oTypographyLink();
+	}
 }
 
 .alphaville-card__standfirst-truncate--2lines {
@@ -74,14 +79,26 @@ $alphaville-card__color--yellow-tint3: #b35400;
 }
 
 .alphaville-card__timestamp {
-	@include oTeaserTimestamp;
-	display:inline-block;
+	@include oEditorialTypographyTimestamp();
+	@include oTypographySans(-2);
+	display: inline-block;
 }
 
 
 .alphaville-card {
-	@include oTeaserBase;
+	@include oTypographySans(-1);
+	position: relative;
+	width: 100%;
+	text-rendering: optimizeLegibility;
+	margin-bottom: oSpacingByName('s4');
 	padding: 10px 10px 0;
+	box-sizing: border-box;
+
+	& *,
+	& *:before,
+	& *:after {
+		box-sizing: inherit;
+	}
 
 	$comment-counter-color: #22757c;
 	.alphaville-card--comment-counter {
@@ -93,7 +110,11 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		padding: 9px 0 0 5px;
 
 		&:after {
-			@include oIconsGetIcon('speech', $comment-counter-color, 24);
+			@include oIconsContent(
+				$icon-name: 'speech',
+				$color: $comment-counter-color,
+				$size: 24
+			);
 			content: '';
 			position: relative;
 			vertical-align: middle;
@@ -102,7 +123,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 	&.alphaville-card--grid {
 		overflow: hidden;
-		background-color: oColorsGetPaletteColor('white-60');
+		background-color: oColorsByName('white-60');
 
 		p {
 			margin: 0;
@@ -134,10 +155,9 @@ $alphaville-card__color--yellow-tint3: #b35400;
 			line-height: 25.2px;
 		}
 
-
 		.alphaville-card__image {
-			@include oTeaserImage;
-
+			display: block;
+			margin: 0;
 			width: 100%;
 
 			img {
@@ -170,12 +190,12 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	p.article__byline {
 		display: inline-block;
 		font-family: MetricWeb, sans-serif;
-		color:#333333;
+		color: #333333;
 		line-height: 12px;
 		font-size: 12px;
 		.article__byline-tag {
 			font-family: MetricWeb, sans-serif;
-			color:#9e2f50;
+			color: oColorsByName('claret');
 			font-weight: 600;
 			line-height: 12px;
 			font-size: 12px;
@@ -226,7 +246,11 @@ $alphaville-card__color--yellow-tint3: #b35400;
 			padding-right: 25px;
 
 			&:after {
-				@include oIconsGetIcon('series', oColorsGetPaletteColor('black-50'), 40, $iconset-version: 1);
+				@include oIconsContent(
+					$icon-name: 'series',
+					$color: oColorsByName('black-50'),
+					$size: 40
+				);
 				content: '';
 				position: absolute;
 				top: 0;
@@ -246,7 +270,11 @@ $alphaville-card__color--yellow-tint3: #b35400;
 			padding-right: 50px;
 
 			&:before {
-				@include oIconsGetIcon('podcast', oColorsGetPaletteColor('black-50'), 40, $iconset-version: 1);
+				@include oIconsContent(
+					$icon-name: 'podcast',
+					$color: oColorsByName('black-50'),
+					$size: 40
+				);
 				content: '';
 				position: absolute;
 				top: 0;
@@ -285,8 +313,8 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	.alphaville-card--marketslive-live--lozenge {
 		@include marketslive-lozenge-icon(
 			$size: 120,
-			$color: $alphaville-card__color--grey-tint2);
-
+			$color: $alphaville-card__color--grey-tint2
+		);
 		position: absolute;
 		top: -55px;
 		right: -60px;
@@ -295,7 +323,8 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	.alphaville-card--marketslive-lozenge-icon {
 		@include marketslive-lozenge-icon(
 			$size: 18,
-			$bgColor: oColorsGetPaletteColor('paper'));
+			$bgColor: oColorsByName('paper')
+		);
 		margin-bottom: -2px;
 	}
 
@@ -348,7 +377,11 @@ $alphaville-card__color--yellow-tint3: #b35400;
 			color: $alphaville-card__color--yellow-tint1;
 
 			&:after {
-				@include oIconsGetIcon('speech', $alphaville-card__color--yellow-tint1, 24);
+				@include oIconsContent(
+					$icon-name: 'speech',
+					$color: $alphaville-card__color--yellow-tint1,
+					$size: 24
+				);
 				position: relative;
 				vertical-align: middle;
 			}
@@ -357,7 +390,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 
 	&.alphaville-card--marketslive-live {
 		.alphaville-card__theme-part2 {
-			color: oColorsGetPaletteColor('white');
+			color: oColorsByName('white');
 			font-weight: 600;
 		}
 	}
@@ -395,12 +428,12 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	}
 
 	.alphaville-card__subheading {
-		@include oTeaserHeading;
-		@include oTypographySansBold($scale: -2);
+		@include oTeaserHeading();
+		@include oTypographySans($scale: -2, $weight: 'semibold');
 
 		&,
 		a {
-			color: oColorsGetPaletteColor('black-30');
+			color: oColorsByName('black-30');
 		}
 	}
 }
@@ -424,7 +457,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	position: relative;
 
 	.alphaville-card__heading {
-		@include oTypographySansBold($scale: 2);
+		@include oTypographySans($scale: 2, $weight: 'semibold');
 		font-size: 25px;
 		line-height: 26px;
 		margin-bottom: 10px;
@@ -441,7 +474,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		&,
 		a,
 		.alphaville-card__tag {
-			@include oTypographySansBold($scale: 4);
+			@include oTypographySans($scale: 4, $weight: 'semibold');
 			font-size: 25px;
 			line-height: 26px;
 			text-transform: uppercase;
@@ -483,7 +516,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	position: relative;
 
 	.alphaville-card__heading {
-		@include oTypographySansBold($scale: 4);
+		@include oTypographySans($scale: 4, $weight: 'semibold');
 		line-height: 26px;
 		font-size: 25px;
 		margin-bottom: 12px;
@@ -555,7 +588,11 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		color: $alphaville-card__color--yellow-tint1;
 
 		&:after {
-			@include oIconsGetIcon('speech', $alphaville-card__color--yellow-tint1, 24);
+			@include oIconsContent(
+				$icon-name: 'speech',
+				$color: $alphaville-card__color--yellow-tint1,
+				$size: 24
+			);
 			position: relative;
 			vertical-align: middle;
 		}
@@ -569,7 +606,7 @@ $alphaville-card__color--yellow-tint3: #b35400;
 	min-height: 170px;
 
 	.alphaville-card__heading {
-		@include oTypographySansBold($scale: 4);
+		@include oTypographySans($scale: 4, $weight: 'semibold');
 		line-height: 26px;
 		font-size: 25px;
 		margin-bottom: 12px;
@@ -621,7 +658,11 @@ $alphaville-card__color--yellow-tint3: #b35400;
 		color: $alphaville-card__color--yellow-tint1;
 
 		&:after {
-			@include oIconsGetIcon('speech', $alphaville-card__color--yellow-tint1, 24);
+			@include oIconsContent(
+				$icon-name: 'speech',
+				$color: $alphaville-card__color--yellow-tint1,
+				$size: 24
+			);
 			position: relative;
 			vertical-align: middle;
 		}

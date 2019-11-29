@@ -1,5 +1,5 @@
-$border-color: oColorsGetPaletteColor('black-20');
-$bg-color: oColorsGetPaletteColor('paper');
+$border-color: oColorsByName('black-20');
+$bg-color: oColorsByName('paper');
 
 .alphaville-content-box {
 	position: relative;

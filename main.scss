@@ -1,3 +1,5 @@
+$system-code: 'ftalphaville';
+
 img {
 	border: 0;
 }
@@ -20,40 +22,42 @@ img {
 $o-ads-is-silent: false;
 @import 'o-ads/main';
 
-$o-fonts-is-silent: false;
 @import 'o-fonts/main';
+@include oFonts();
 
-$o-typography-is-silent: false;
 @import 'o-typography/main';
+@include oTypography();
 
 $o-grid-mode: snappy;
-$o-grid-is-silent: false;
 @import 'o-grid/main';
+@include oGrid();
 
-$o-buttons-is-silent: false;
 @import 'o-buttons/main';
+@include oButtons();
 
-$o-header-is-silent: false;
 @import 'o-header/main';
+@include oHeader();
 
-$o-footer-is-silent: false;
 @import 'o-footer/main';
+@include oFooter();
 
-$o-icons-is-silent: false;
 @import 'o-icons/main';
+@include oIcons();
 
-$o-overlay-is-silent: false;
 @import 'o-overlay/main';
+@include oOverlay();
 
-$o-forms-is-silent: false;
 @import 'o-forms/main';
+@include oForms();
 
-$o-teaser-is-silent: false;
 @import 'o-teaser/main';
+@include oTeaser();
+
+@import 'o-editorial-typography/main';
 
 @import 'o-colors/main';
 
-@import "o-share/main";
+@import 'o-share/main';
 
 @import './generic/main';
 

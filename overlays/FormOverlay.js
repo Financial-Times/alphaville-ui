@@ -1,5 +1,5 @@
-const Overlay = require('o-overlay');
-const Delegate = require('ftdomdelegate');
+import Overlay from 'o-overlay';
+import Delegate from 'ftdomdelegate';
 
 function serialize (form) {
 	const s = {};
@@ -77,7 +77,7 @@ function FormOverlay (options) {
 					<div class="alphaville-overlay-form-content">${generateFormHtml(fields)}</div>
 					<div class="alphaville-overlay-buttons">
 						${submitLabel ? `<button type="submit" class="alphaville-overlay-submit o-buttons o-buttons--primary">${submitLabel}</button>` : ''}
-						<button type="button" class="alphaville-overlay-cancel o-buttons">${submitLabel ? 'Cancel' : 'Close'}</button>
+						<button type="button" class="alphaville-overlay-cancel o-buttons o-buttons--secondary">${submitLabel ? 'Cancel' : 'Close'}</button>
 					</div>
 				</form>
 			`,
