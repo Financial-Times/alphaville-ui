@@ -28,7 +28,7 @@
     "o-share": "^7.0.0",
     "o-teaser": "^4.0.0",
     "o-forms": "^8.0.0",
-    "o-cookie-message": "^5.0.0",
+    "o-cookie-message": "^5.0.0"
   },
   "license": "MIT",
   "ignore": [
