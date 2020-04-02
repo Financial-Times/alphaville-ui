@@ -29,7 +29,6 @@
     "o-teaser": "^4.0.0",
     "o-forms": "^8.0.0",
     "o-cookie-message": "^5.0.0",
-    "o-permutive": "^1.0.7"
   },
   "license": "MIT",
   "ignore": [
