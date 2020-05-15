@@ -1,4 +1,7 @@
-@include oShare($opts: ('vertical': false));
+@include oShare($opts: (
+	'vertical': false,
+	'icons': ('twitter', 'facebook', 'linkedin')
+));
 
 .article__share {
 	position: relative;
