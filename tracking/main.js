@@ -14,7 +14,10 @@ function otrackinginit() {
 	oTracking.init(config_data);
 }
 
-document.addEventListener("o.DOMContentLoaded", function() {
+document.addEventListener("o.DOMContentLoaded", function setupOTracking() {
+	// Remove the event listener so that o-tracking is only ever setup once.
+	// This is a protective measure incase other code fires this event.
+	document.removeEventListener("o.DOMContentLoaded", setupOTracking);
 	var article = document.querySelectorAll('article.article__body.n-content-body');
 	var uuid = (article.length > 0)? article[0].getAttribute('data-content-id'): false;
 	var trackingPageConfig = {
