@@ -20,44 +20,44 @@ img {
 
 
 $o-ads-is-silent: false;
-@import 'o-ads/main';
+@import '@financial-times/o-ads/main';
 
-@import 'o-fonts/main';
+@import '@financial-times/o-fonts/main';
 @include oFonts();
 
-@import 'o-typography/main';
+@import '@financial-times/o-typography/main';
 @include oTypography();
 
 $o-grid-mode: snappy;
-@import 'o-grid/main';
+@import '@financial-times/o-grid/main';
 @include oGrid();
 
-@import 'o-buttons/main';
+@import '@financial-times/o-buttons/main';
 @include oButtons();
 
-@import 'o-header/main';
+@import '@financial-times/o-header/main';
 @include oHeader();
 
-@import 'o-footer/main';
+@import '@financial-times/o-footer/main';
 @include oFooter();
 
-@import 'o-icons/main';
+@import '@financial-times/o-icons/main';
 @include oIcons();
 
-@import 'o-overlay/main';
+@import '@financial-times/o-overlay/main';
 @include oOverlay();
 
-@import 'o-forms/main';
+@import '@financial-times/o-forms/main';
 @include oForms();
 
-@import 'o-teaser/main';
+@import '@financial-times/o-teaser/main';
 @include oTeaser();
 
-@import 'o-editorial-typography/main';
+@import '@financial-times/o-editorial-typography/main';
 
-@import 'o-colors/main';
+@import '@financial-times/o-colors/main';
 
-@import 'o-share/main';
+@import '@financial-times/o-share/main';
 
 @import './generic/main';
 
