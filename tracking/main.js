@@ -1,4 +1,5 @@
-import oTracking from 'o-tracking';
+import oTracking from '@financial-times/o-tracking';
+// import oTracking from '../node_modules/@financial-times/o-tracking';
 
 function otrackinginit() {
 	const config_data = {

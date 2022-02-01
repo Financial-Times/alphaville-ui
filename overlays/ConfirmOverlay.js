@@ -1,4 +1,4 @@
-import Overlay from 'o-overlay';
+import Overlay from '@financial-times/o-overlay';
 import Delegate from 'ftdomdelegate';
 
 function ConfirmOverlay (title, text) {

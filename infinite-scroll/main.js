@@ -1,4 +1,4 @@
-import oViewport from 'o-viewport';
+import oViewport from '@financial-times/o-viewport';
 const httpRequest = require('../utils/httpRequest');
 const domUtils = require('../utils/dom');
 

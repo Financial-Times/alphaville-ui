@@ -20,44 +20,49 @@ img {
 
 
 $o-ads-is-silent: false;
-@import '@financial-times/o-ads/main';
+@import './node_modules/@financial-times/ads-legacy-o-ads/main';
+// @import './node_modules/@financial-times/ads-display/main';
+// @import './node_modules/@financial-times/o-ads/main';
 
-@import '@financial-times/o-fonts/main';
+// $o-ads-is-silent: false !default;
+// @import './node_modules/@financial-times/ads-legacy-o-ads/main';
+
+@import './node_modules/@financial-times/o-fonts/main';
 @include oFonts();
 
-@import '@financial-times/o-typography/main';
+@import './node_modules/@financial-times/o-typography/main';
 @include oTypography();
 
 $o-grid-mode: snappy;
-@import '@financial-times/o-grid/main';
+@import './node_modules/@financial-times/o-grid/main';
 @include oGrid();
 
-@import '@financial-times/o-buttons/main';
+@import './node_modules/@financial-times/o-buttons/main';
 @include oButtons();
 
-@import '@financial-times/o-header/main';
+@import './node_modules/@financial-times/o-header/main';
 @include oHeader();
 
-@import '@financial-times/o-footer/main';
+@import './node_modules/@financial-times/o-footer/main';
 @include oFooter();
 
-@import '@financial-times/o-icons/main';
+@import './node_modules/@financial-times/o-icons/main';
 @include oIcons();
 
-@import '@financial-times/o-overlay/main';
+@import './node_modules/@financial-times/o-overlay/main';
 @include oOverlay();
 
-@import '@financial-times/o-forms/main';
+@import './node_modules/@financial-times/o-forms/main';
 @include oForms();
 
-@import '@financial-times/o-teaser/main';
+@import './node_modules/@financial-times/o-teaser/main';
 @include oTeaser();
 
-@import '@financial-times/o-editorial-typography/main';
+@import './node_modules/@financial-times/o-editorial-typography/main';
 
-@import '@financial-times/o-colors/main';
+@import './node_modules/@financial-times/o-colors/main';
 
-@import '@financial-times/o-share/main';
+@import './node_modules/@financial-times/o-share/main';
 
 @import './generic/main';
 
