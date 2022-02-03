@@ -15,7 +15,9 @@
   },
   "homepage": "https://github.com/Financial-Times/alphaville-ui#readme",
   "dependencies": {
-    "@financial-times/ads-display": "2.1.0",
+    "@financial-times/ads-display": "2.1.0"
+  },
+  "peerDependencies": {
     "@financial-times/o-buttons": "^7.2.2",
     "@financial-times/o-colors": "^6.4.2",
     "@financial-times/o-cookie-message": "^6.3.1",
