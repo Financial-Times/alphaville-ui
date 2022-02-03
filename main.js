@@ -1,12 +1,12 @@
-import oDate from './node_modules/@financial-times/o-date';
-import oAds from './node_modules/@financial-times/ads-legacy-o-ads';
-import oGrid from './node_modules/@financial-times/o-grid';
-import oHeader from './node_modules/@financial-times/o-header';
-import oFooter from './node_modules/@financial-times/o-footer';
-import oTracking from './node_modules/@financial-times/o-tracking';
-import oOverlay from './node_modules/@financial-times/o-overlay';
-import oShare from './node_modules/@financial-times/o-share';
-import oCookieMessage from './node_modules/@financial-times/o-cookie-message';
+import oDate from '@financial-times/o-date';
+import oAds from '@financial-times/ads-legacy-o-ads';
+import oGrid from '@financial-times/o-grid';
+import oHeader from '@financial-times/o-header';
+import oFooter from '@financial-times/o-footer';
+import oTracking from '@financial-times/o-tracking';
+import oOverlay from '@financial-times/o-overlay';
+import oShare from '@financial-times/o-share';
+import oCookieMessage from '@financial-times/o-cookie-message';
 
 exports['o-date'] = oDate;
 exports['o-ads'] = oAds;

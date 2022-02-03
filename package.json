@@ -27,6 +27,7 @@
     "@financial-times/o-grid": "^6.1.1",
     "@financial-times/o-header": "^9.2.3",
     "@financial-times/o-icons": "^7.2.1",
+    "@financial-times/o-labels": "^6.2.2",
     "@financial-times/o-overlay": "^4.2.3",
     "@financial-times/o-share": "^8.2.1",
     "@financial-times/o-teaser": "^6.2.2",
