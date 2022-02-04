@@ -20,49 +20,49 @@ img {
 
 
 $o-ads-is-silent: false;
-@import 'node_modules/@financial-times/ads-legacy-o-ads/main'; // needs node_modules in path, not seeing sass includespath from obt
-// @import './node_modules/@financial-times/ads-display/main';
-// @import './node_modules/@financial-times/o-ads/main';
+@import '@financial-times/ads-legacy-o-ads/main'; // needs node_modules in path, not seeing sass includespath from obt
+// @import './@financial-times/ads-display/main';
+// @import './@financial-times/o-ads/main';
 
 // $o-ads-is-silent: false !default;
-// @import './node_modules/@financial-times/ads-legacy-o-ads/main';
+// @import './@financial-times/ads-legacy-o-ads/main';
 
-@import 'node_modules/@financial-times/o-fonts/main';
+@import '@financial-times/o-fonts/main';
 @include oFonts();
 
-@import 'node_modules/@financial-times/o-typography/main';
+@import '@financial-times/o-typography/main';
 @include oTypography();
 
 $o-grid-mode: snappy;
-@import 'node_modules/@financial-times/o-grid/main';
+@import '@financial-times/o-grid/main';
 @include oGrid();
 
-@import 'node_modules/@financial-times/o-buttons/main';
+@import '@financial-times/o-buttons/main';
 @include oButtons();
 
-@import 'node_modules/@financial-times/o-header/main';
+@import '@financial-times/o-header/main';
 @include oHeader();
 
-@import 'node_modules/@financial-times/o-footer/main';
+@import '@financial-times/o-footer/main';
 @include oFooter();
 
-@import 'node_modules/@financial-times/o-icons/main';
+@import '@financial-times/o-icons/main';
 @include oIcons();
 
-@import 'node_modules/@financial-times/o-overlay/main';
+@import '@financial-times/o-overlay/main';
 @include oOverlay();
 
-@import 'node_modules/@financial-times/o-forms/main';
+@import '@financial-times/o-forms/main';
 @include oForms();
 
-@import 'node_modules/@financial-times/o-teaser/main';
+@import '@financial-times/o-teaser/main';
 @include oTeaser();
 
-@import 'node_modules/@financial-times/o-editorial-typography/main';
+@import '@financial-times/o-editorial-typography/main';
 
-@import 'node_modules/@financial-times/o-colors/main';
+@import '@financial-times/o-colors/main';
 
-@import 'node_modules/@financial-times/o-share/main';
+@import '@financial-times/o-share/main';
 
 @import './generic/main';
 
