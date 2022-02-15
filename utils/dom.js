@@ -1,9 +1,21 @@
+export default {
+	toDOM,
+getComputedStyle,
+windowSize,
+offset,
+getParents,
+sanitizeHtml,
+sanitizeHtmlId,
+sanitizeHtml,
+addScript,
+}
+
 /**
  * Converts a plain HTML string into a DOM object.
  * @param  {String} htmlString Plain HTML in a string format.
  * @return {DOMObject} DOM Object
  */
-exports.toDOM = function(htmlString) {
+function toDOM(htmlString) {
 	const d = document;
 	let i;
 	const a = d.createElement("div");
@@ -25,7 +37,7 @@ exports.toDOM = function(htmlString) {
  * @param {DOMObject} pseudoElement Optional. A string specifying the pseudo-element to match. Must be omitted (or null) for regular elements.
  * @return {Object}            Object that has a getPropertyValue function which gets a property name as parameter.
  */
-exports.getComputedStyle = function(el, pseudoElement) {
+function getComputedStyle(el, pseudoElement) {
 	if (!window.getComputedStyle) {
 		return {
 			getPropertyValue: function(prop) {
@@ -52,7 +64,7 @@ exports.getComputedStyle = function(el, pseudoElement) {
  * Computes the window's size.
  * @return {Object} {width: XX, height: YY}
  */
-exports.windowSize = function() {
+function windowSize() {
 	const w = window;
 	const d = document;
 	const e = d.documentElement;
@@ -66,7 +78,7 @@ exports.windowSize = function() {
 	};
 };
 
-exports.offset = function(el) {
+function offset(el) {
 	let left = 0;
 	let top = 0;
 
@@ -103,7 +115,7 @@ exports.offset = function(el) {
  * @param  {String} selector The class, id, data attribute, or tag to look for
  * @return {Array} Null if no match
  */
-exports.getParents = function(elem, selector) {
+function getParents(elem, selector) {
 	let firstChar;
 	const parents = [];
 
@@ -153,19 +165,19 @@ exports.getParents = function(elem, selector) {
 
 };
 
-exports.sanitizeHtml = function (str) {
+function sanitizeHtml(str) {
 	const div = document.createElement("div");
 	div.textContent = str;
 	return div.innerHTML;
 };
 
-exports.sanitizeHtmlId = function (str) {
-	let strSanitized = exports.sanitizeHtml(str);
+function sanitizeHtmlId (str) {
+	let strSanitized = sanitizeHtml(str);
 	strSanitized = strSanitized.replace(/[^a-zA-Z0-9_-]/g, '');
 	return strSanitized;
 };
 
-exports.addScript = function (baseurl, params) {
+function addScript(baseurl, params) {
 	return new Promise((resolve) => {
 		let fullUrl;
 		let script;

@@ -1,6 +1,6 @@
 /* global Pusher */
 
-exports.activeSession = function () {
+function activeSession () {
 	return fetch('/marketslive/api/sessions/latest?_=' + new Date().getTime()).then((response) => {
 		if (response.status < 200 || response.status >= 400) {
 			throw new Error("Request failed");
@@ -45,10 +45,15 @@ function fetchChannel () {
 }
 
 let channelFetchPromise;
-exports.listen = function () {
+function listen () {
 	if (!channelFetchPromise) {
 		channelFetchPromise = fetchChannel();
 	}
 
 	return channelFetchPromise;
 };
+
+export default {
+	listen,
+	activeSession
+}

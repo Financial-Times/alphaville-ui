@@ -1,4 +1,4 @@
-const sessionListener = require('../marketslive-session-listener/main');
+import sessionListener from '../marketslive-session-listener/main';
 
 const sessionNotificationTemplate = `
 	<div class="marketslive-notification">
@@ -125,14 +125,20 @@ document.addEventListener('o.DOMContentLoaded', () => {
 });
 
 
-exports.sessionSeen = function (sessionId) {
+function sessionSeen (sessionId) {
 	window.localStorage.setItem('marketslive-notification-closed', sessionId);
 };
 
-exports.disableNotification = function () {
+function disableNotification () {
 	notificationEnabled = false;
 };
 
-exports.enableNotification = function () {
+function enableNotification() {
 	notificationEnabled = true;
 };
+
+export default {
+	sessionSeen,
+	disableNotification,
+	enableNotification,
+}

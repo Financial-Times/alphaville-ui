@@ -1,7 +1,7 @@
 import Overlay from '@financial-times/o-overlay';
 import Delegate from 'ftdomdelegate';
 
-function AlertOverlay (title, text) {
+export default function AlertOverlay (title, text) {
 	if (!text) {
 		text = title;
 		title = null;
@@ -29,5 +29,3 @@ function AlertOverlay (title, text) {
 		overlayInstance.close();
 	});
 }
-
-module.exports = AlertOverlay;

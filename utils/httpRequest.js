@@ -121,20 +121,20 @@ function execute (config) {
 	});
 }
 
-exports.get = function (config) {
+function get(config) {
 	config.type = 'get';
 
 	return execute(config);
 };
 
-exports.post = function (config) {
+function post(config) {
 	config.type = 'post';
 
 	return execute(config);
 };
 
 
-exports.hasSupportForCors = function () {
+function hasSupportForCors() {
 	const xhr = getXhrForUrl('http://example.com');
 
 	if (xhr instanceof XMLHttpRequest) {
@@ -143,7 +143,9 @@ exports.hasSupportForCors = function () {
 		return false;
 	}
 };
-
+export default {
+	get,post,hasSupportForCors
+}
 /**
  * Determine XHR.
  */

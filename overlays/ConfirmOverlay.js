@@ -1,7 +1,7 @@
 import Overlay from '@financial-times/o-overlay';
 import Delegate from 'ftdomdelegate';
 
-function ConfirmOverlay (title, text) {
+export default function ConfirmOverlay (title, text) {
 	if (!text) {
 		text = title;
 		title = null;
@@ -63,5 +63,3 @@ document.addEventListener('o.DOMContentLoaded', () => {
 		}
 	}
 });
-
-module.exports = ConfirmOverlay;

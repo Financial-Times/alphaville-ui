@@ -1,8 +1,8 @@
 import oViewport from '@financial-times/o-viewport';
-const httpRequest = require('../utils/httpRequest');
-const domUtils = require('../utils/dom');
+import httpRequest from '../utils/httpRequest';
+import domUtils from '../utils/dom';
 
-function InfiniteScroll (config) {
+export default function InfiniteScroll (config) {
 	let baseUrl;
 	const query = {};
 
@@ -103,5 +103,3 @@ function InfiniteScroll (config) {
 	document.addEventListener('oViewport.scroll', onScroll);
 }
 InfiniteScroll.listenToScroll = false;
-
-module.exports = InfiniteScroll;

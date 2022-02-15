@@ -64,7 +64,7 @@ function generateFormHtml (fields) {
 	return html;
 };
 
-function FormOverlay (options) {
+export default function FormOverlay (options) {
 	const title = options.title || '';
 	const submitLabel = options.submitLabel;
 	const fields = options.fields || {};
@@ -122,5 +122,3 @@ function FormOverlay (options) {
 		overlayInstance.wrapper.addEventListener('oOverlay.destroy', onDestroy);
 	});
 }
-
-module.exports = FormOverlay;
